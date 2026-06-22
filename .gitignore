@@ -1,0 +1,5 @@
+# 忽略临时文件和系统文件
+Thumbs.db
+.DS_Store
+*.pyc
+__pycache__/
