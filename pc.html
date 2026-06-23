@@ -149,15 +149,15 @@ body.theme-battle{background-image:url('bg_battle.jpg');}
 
 <div class="wrapper">
   <div class="top-bar">
-    <div class="stat" title="HP，归零则游戏结束">❤️ <span class="val hp-val" id="hpDisplay">100</span></div>
-    <div class="stat" title="灵石，用于购买修士、Refresh商店、Level Up">🪙 <span class="val" id="goldDisplay">5</span></div>
+    <div class="stat" title="生命值，归零则游戏结束">❤️ <span class="val hp-val" id="hpDisplay">100</span></div>
+    <div class="stat" title="灵石，用于购买修士、刷新商店、升级">🪙 <span class="val" id="goldDisplay">5</span></div>
     <div class="stat" title="每级+5%全属性，提高商店高费概率">📊 <span class="val" id="levelDisplay">1⭐</span></div>
-    <div class="stat" title="Current Stage">👾 <span class="val" id="roundDisplay">Round 1</span></div>
-    <div class="stat" title="Streak额外灵石，LosingNone惩罚">🏆 <span class="val" id="streakDisplay">-</span></div>
+    <div class="stat" title="Stage">👾 <span class="val" id="roundDisplay">第1轮</span></div>
+    <div class="stat" title="连胜额外灵石，连败无惩罚">🏆 <span class="val" id="streakDisplay">-</span></div>
     <div class="stat" title="已上场/可上场人数">📦 <span class="val" id="boardCount">0/1</span></div>
-    <div class="stat" id="resultDisplay" style="color:#aaa;" title="当前Status">Preparing</div>
-    <div class="stat" id="formationStat" style="color:#666;font-size:11px;min-width:60px;" title="Current Formation">🚫No Formation</div>
-    <div class="stat" title="拥有的Artifacts数量" id="artifactDisplay" style="display:none;color:#b388ff;">🏺 <span class="val" id="artifactCountTop">0</span></div>
+    <div class="stat" id="resultDisplay" style="color:#aaa;" title="当前状态">Preparing</div>
+    <div class="stat" id="formationStat" style="color:#666;font-size:11px;min-width:60px;" title="Formation">🚫无Formation</div>
+    <div class="stat" title="拥有的神器数量" id="artifactDisplay" style="display:none;color:#b388ff;">🏺 <span class="val" id="artifactCountTop">0</span></div>
   </div>
 
   <div class="board-container">
@@ -165,7 +165,7 @@ body.theme-battle{background-image:url('bg_battle.jpg');}
     <div id="formationLabel" style="position:absolute;top:-4px;left:50%;transform:translateX(-50%);font-size:11px;color:#ffd700;background:rgba(0,0,0,0.6);padding:1px 8px;border-radius:4px;white-space:nowrap;z-index:5;display:none;">⚡ Arrow Formation</div>
     <div class="right-panel">
       <div class="synergy-panel">
-        <div class="title">⚡ Synergies <span id="formationToggle" style="color:#888;font-size:10px;cursor:pointer;margin-left:6px;">📖阵型</span></div>
+        <div class="title">⚡ Synergies <span id="formationToggle" style="color:#888;font-size:10px;cursor:pointer;margin-left:6px;">📖Formation</span></div>
         <div class="synergy-list" id="synergyList"></div>
       </div>
       <div class="synergy-panel" id="artifactPanel" style="display:none;">
@@ -175,15 +175,15 @@ body.theme-battle{background-image:url('bg_battle.jpg');}
       <div class="shop-panel">
         <div class="shop-title">
           <span>🏪 Recruit</span>
-          <span style="font-size:11px;color:#666;" id="shopInfo">Refresh2🪙</span>
+          <span style="font-size:11px;color:#666;" id="shopInfo">刷新2🪙</span>
         </div>
         <div class="shop-items" id="shopItems"></div>
         <div class="shop-actions">
-          <button class="btn" id="refreshBtn">🔄 Refresh (2🪙)</button>
-          <button class="btn primary" id="levelBtn">⬆️ Level Up (4🪙)</button>
-          <button class="btn" id="startBtn">⚔️ Start Battle</button>
-          <button class="btn" id="adBtn">📺 Ad (2-5🪙)</button>
-          <button class="btn" id="modeBtn">🎮 Normal</button>
+          <button class="btn" id="refreshBtn">🔄 刷新 (2🪙)</button>
+          <button class="btn primary" id="levelBtn">⬆️ 升级 (4🪙)</button>
+          <button class="btn" id="startBtn">⚔️ 开始对战</button>
+          <button class="btn" id="adBtn">📺 广告 (2-5🪙)</button>
+          <button class="btn" id="modeBtn">🎮 普通</button>
         </div>
       </div>
       <div class="bench-panel">
@@ -197,23 +197,23 @@ body.theme-battle{background-image:url('bg_battle.jpg');}
           <div class="help-item">📦 备用区 <b>左键</b>选中 → 棋盘变金色 <b>点击放置</b></div>
           <div class="help-item">♟️ 棋盘修士 <b>点击</b> → 放回备用区</div>
           <div class="help-item">📦 备用区 <b>右键</b> → 出售换灵石</div>
-          <div class="help-item">⭐ 买3同名1星 → 自动合成 <b>★★</b></div>
-          <div class="help-item">⚡ 放同门派 → 激活 <b>Synergies</b></div>
-          <div class="help-item">⬆️ 点 <b>Level Up</b> → 增加上阵人数</div>
+          <div class="help-item">⭐ 买3个同名1星 → 自动合成 <b>★★</b></div>
+          <div class="help-item">⚡ 放同门派 → 激活 <b>羁绊</b></div>
+          <div class="help-item">⬆️ 点 <b>升级</b> → 增加上阵人数</div>
           <div class="help-item">⚔️ 点 <b>Start Battle</b> → 看战斗动画</div>
         </div>
       </div>
       <div class="help-panel">
         <div class="help-title">🔺 Counters</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px 8px;font-size:10px;color:#888;">
-          <div>⚔️Swordsman→<b style="color:#f88;">Body Cult</b></div>
-          <div>🛡️Body Cult→<b style="color:#f88;">Rogue</b></div>
-          <div>🌀Rogue→<b style="color:#f88;">Swordsman</b></div>
-          <div>📜Rune Master→<b style="color:#f88;">Array Master</b></div>
-          <div>🔷Array Master→<b style="color:#f88;">Beast Cult</b></div>
-          <div>🐲Beast Cult→<b style="color:#f88;">Rune Master</b></div>
-          <div>💊Alchemist↔<b style="color:#f88;">Demon Cult</b></div>
-          <div>👿Demon Cult↔<b style="color:#f88;">Alchemist</b></div>
+          <div>⚔️剑修→<b style="color:#f88;">体修</b></div>
+          <div>🛡️体修→<b style="color:#f88;">散修</b></div>
+          <div>🌀散修→<b style="color:#f88;">剑修</b></div>
+          <div>📜符修→<b style="color:#f88;">阵修</b></div>
+          <div>🔷阵修→<b style="color:#f88;">妖修</b></div>
+          <div>🐲妖修→<b style="color:#f88;">符修</b></div>
+          <div>💊丹修↔<b style="color:#f88;">魔修</b></div>
+          <div>👿魔修↔<b style="color:#f88;">丹修</b></div>
         </div>
       </div>
     </div>
@@ -221,7 +221,7 @@ body.theme-battle{background-image:url('bg_battle.jpg');}
 </div>
 
 <div class="battle-bar" id="battleBar" style="display:none;position:fixed;top:0;left:0;width:100%;padding:8px 16px;background:rgba(10,14,26,0.9);z-index:99;display:none;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,215,0,0.2);">
-  <span style="color:#ffd700;font-size:16px;">⚔️ Fighting... <span id="battleRoundDisplay" style="font-size:13px;color:#aaa;">Round 1</span></span>
+  <span style="color:#ffd700;font-size:16px;">⚔️ Fighting... <span id="battleRoundDisplay" style="font-size:13px;color:#aaa;">回合 1</span></span>
   <span id="battleStatus" style="color:#aaa;font-size:13px;">⚔️ In Battle</span>
 </div>
 
@@ -240,13 +240,13 @@ body.theme-battle{background-image:url('bg_battle.jpg');}
   </div>
 </div>
 
-<!-- Artifacts选择 -->
+<!-- 神器选择 -->
 <div class="battle-result-overlay" id="artifactOverlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);justify-content:center;align-items:center;z-index:100;">
   <div style="background:linear-gradient(135deg,#1e2a4a,#2a1a3e);border:2px solid #b388ff;border-radius:16px;padding:24px 32px;text-align:center;color:#fff;min-width:400px;">
-    <h2 style="color:#b388ff;margin-bottom:4px;">🏺 上古Artifacts</h2>
-    <div style="color:#aaa;font-size:13px;margin-bottom:16px;">Choose an artifact to permanently empower your units</div>
+    <h2 style="color:#b388ff;margin-bottom:4px;">🏺 Ancient Artifacts</h2>
+    <div style="color:#aaa;font-size:13px;margin-bottom:16px;">Choose an artifact to empower your units</div>
     <div id="artifactCards" style="display:flex;gap:12px;justify-content:center;margin-bottom:16px;"></div>
-    <div style="font-size:12px;color:#666;">Owned: <span id="artifactCount">0</span> </div>
+    <div style="font-size:12px;color:#666;">Owned: <span id="artifactCount">0</span> 件</div>
   </div>
 </div>
 
@@ -260,10 +260,10 @@ body.theme-battle{background-image:url('bg_battle.jpg');}
     <div style="text-align:left;font-size:13px;line-height:1.8;color:#ccc;">
       <div style="margin:6px 0;">🏪 <b style="color:#ffd700;">购买修士</b> — 点商店卡牌购买，自动放入备用区</div>
       <div style="margin:6px 0;">📦 <b style="color:#ffd700;">上阵</b> — 点备用区修士选中，再点棋盘放置</div>
-      <div style="margin:6px 0;">⭐ <b style="color:#ffd700;">合成Level Up</b> — 买3同名1星自动合成★★</div>
-      <div style="margin:6px 0;">⚡ <b style="color:#ffd700;">Synergies</b> — 同门派一起上阵激活加成</div>
-      <div style="margin:6px 0;">🏺 <b style="color:#b388ff;">Artifacts</b> — 每3rounds可选一Artifacts强化全队</div>
-      <div style="margin:6px 0;">⚔️ <b style="color:#ff6b6b;">开战</b> — 排好阵型后点"Start Battle"</div>
+      <div style="margin:6px 0;">⭐ <b style="color:#ffd700;">合成升级</b> — 买3个同名1星自动合成★★</div>
+      <div style="margin:6px 0;">⚡ <b style="color:#ffd700;">羁绊</b> — 同门派一起上阵激活加成</div>
+      <div style="margin:6px 0;">🏺 <b style="color:#b388ff;">神器</b> — 每3轮可选一件神器强化全队</div>
+      <div style="margin:6px 0;">⚔️ <b style="color:#ff6b6b;">开战</b> — 排好Formation后点"开始对战"</div>
     </div>
     <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);">
       <button onclick="document.getElementById('tutorialOverlay').style.display='none';localStorage.setItem('tutorial_done','1');" style="padding:8px 36px;border-radius:8px;border:1px solid #ffd700;background:rgba(255,215,0,0.12);color:#ffd700;font-size:14px;cursor:pointer;">Start Game 🚀</button>
@@ -277,63 +277,63 @@ body.theme-battle{background-image:url('bg_battle.jpg');}
 // ============================================================
 
 const UNITS = [
-  {id:'sword1', name:'Qi Swordsman', icon:'🗡️', cost:1, hp:60, atk:15, def:3, range:'Melee', factions:['Swordsman'], desc:'基础Swordsman'},
-  {id:'body1', name:'Qi Body Cult', icon:'💪', cost:1, hp:90, atk:8, def:8, range:'Melee', factions:['Body Cult'], desc:'血厚防高'},
-  {id:'scatter1', name:'Rogue Apprentice', icon:'🌀', cost:1, hp:50, atk:18, def:2, range:'Melee', factions:['Rogue'], desc:'高攻脆皮'},
-  {id:'alch1', name:'Alch Apprentice', icon:'🧪', cost:1, hp:55, atk:10, def:3, range:'Ranged', factions:['Alchemist'], desc:'后排Regen'},
-  {id:'beast1', name:'Beast Cub', icon:'🐉', cost:1, hp:70, atk:12, def:5, range:'Melee', factions:['Beast Cult'], desc:'妖族基础'},
-  {id:'sword2', name:'Foundation Sword', icon:'⚔️', cost:2, hp:100, atk:28, def:5, range:'Melee', factions:['Swordsman'], desc:'剑气纵横'},
-  {id:'rune2', name:'Rune Master', icon:'📜', cost:2, hp:75, atk:22, def:2, range:'Ranged', factions:['Rune Master'], desc:'后排法攻'},
-  {id:'body2', name:'Foundation Body', icon:'🛡️', cost:2, hp:150, atk:14, def:12, range:'Melee', factions:['Body Cult'], desc:'铁骨铮铮'},
-  {id:'demon2', name:'Fallen Rogue', icon:'👺', cost:2, hp:80, atk:30, def:3, range:'Melee', factions:['Rogue','Demon Cult'], desc:'双SynergiesMelee'},
-  {id:'beast2', name:'Wild Beast', icon:'🐲', cost:2, hp:110, atk:20, def:7, range:'Melee', factions:['Beast Cult'], desc:'妖族战士'},
-  {id:'sword3', name:'Core Sword', icon:'🌟', cost:3, hp:150, atk:45, def:8, range:'Melee', aoe:2, factions:['Swordsman'], desc:'一剑破万法·剑气纵横'},
-  {id:'rune3', name:'Core Rune Master', icon:'🔮', cost:3, hp:110, atk:35, def:4, range:'Ranged', aoe:2, factions:['Rune Master'], desc:'符法通天·爆裂符'},
-  {id:'array3', name:'Array Master', icon:'🔷', cost:3, hp:130, atk:25, def:6, range:'Ranged', factions:['Array Master'], desc:'后排布阵'},
-  {id:'demon3', name:'Dark Rogue', icon:'😈', cost:3, hp:120, atk:40, def:5, range:'Melee', factions:['Rogue','Demon Cult'], desc:'嗜血狂攻'},
-  {id:'alch3', name:'Alchemy Elder', icon:'💊', cost:3, hp:100, atk:30, def:4, range:'Ranged', factions:['Alchemist'], desc:'大回复术'},
-  {id:'sword4', name:'Nascent Sword Lord', icon:'⚡', cost:4, hp:200, atk:60, def:10, range:'Melee', aoe:3, factions:['Swordsman'], desc:'万剑归宗·剑阵'},
-  {id:'array4', name:'Mountain Array', icon:'🛐', cost:4, hp:180, atk:35, def:8, range:'Ranged', factions:['Array Master'], desc:'群体Shield'},
-  {id:'demon4', name:'Demon Lord', icon:'👿', cost:4, hp:160, atk:55, def:7, range:'Melee', aoe:2, factions:['Demon Cult'], desc:'Lifesteal魔功·魔焰'},
-  {id:'beast4', name:'Ancient Beast King', icon:'🐯', cost:4, hp:220, atk:50, def:12, range:'Melee', aoe:3, factions:['Beast Cult'], desc:'妖气冲天·兽王咆哮'},
-  {id:'sword5', name:'Divine Sword God', icon:'☀️', cost:5, hp:280, atk:80, def:15, range:'Melee', aoe:5, factions:['Swordsman','Rogue'], desc:'剑道巅峰·Ten Thousand Swords'},
-  {id:'array5', name:'Heaven Array', icon:'💠', cost:5, hp:250, atk:55, def:12, range:'Ranged', aoe:3, factions:['Array Master','Rune Master'], desc:'阵法合一·天罗地网'},
-  {id:'demon5', name:'Ancient Demon', icon:'🔥', cost:5, hp:300, atk:75, def:14, range:'Melee', aoe:5, factions:['Demon Cult','Beast Cult'], desc:'万魔之祖·灭世魔焰'},
+  {id:'sword1', name:'练气剑修', icon:'🗡️', cost:1, hp:60, atk:15, def:3, range:'近战', factions:['剑修'], desc:'基础剑修'},
+  {id:'body1', name:'练气体修', icon:'💪', cost:1, hp:90, atk:8, def:8, range:'近战', factions:['体修'], desc:'血厚防高'},
+  {id:'scatter1', name:'散修学徒', icon:'🌀', cost:1, hp:50, atk:18, def:2, range:'近战', factions:['散修'], desc:'高攻脆皮'},
+  {id:'alch1', name:'丹童', icon:'🧪', cost:1, hp:55, atk:10, def:3, range:'远程', factions:['丹修'], desc:'后排回血'},
+  {id:'beast1', name:'灵兽幼崽', icon:'🐉', cost:1, hp:70, atk:12, def:5, range:'近战', factions:['妖修'], desc:'妖族基础'},
+  {id:'sword2', name:'筑基剑修', icon:'⚔️', cost:2, hp:100, atk:28, def:5, range:'近战', factions:['剑修'], desc:'剑气纵横'},
+  {id:'rune2', name:'符修', icon:'📜', cost:2, hp:75, atk:22, def:2, range:'远程', factions:['符修'], desc:'后排法攻'},
+  {id:'body2', name:'筑基体修', icon:'🛡️', cost:2, hp:150, atk:14, def:12, range:'近战', factions:['体修'], desc:'铁骨铮铮'},
+  {id:'demon2', name:'入魔散修', icon:'👺', cost:2, hp:80, atk:30, def:3, range:'近战', factions:['散修','魔修'], desc:'双羁绊近战'},
+  {id:'beast2', name:'妖兽', icon:'🐲', cost:2, hp:110, atk:20, def:7, range:'近战', factions:['妖修'], desc:'妖族战士'},
+  {id:'sword3', name:'金丹剑修', icon:'🌟', cost:3, hp:150, atk:45, def:8, range:'近战', aoe:2, factions:['剑修'], desc:'一剑破万法·剑气纵横'},
+  {id:'rune3', name:'金丹符师', icon:'🔮', cost:3, hp:110, atk:35, def:4, range:'远程', aoe:2, factions:['符修'], desc:'符法通天·爆裂符'},
+  {id:'array3', name:'阵修', icon:'🔷', cost:3, hp:130, atk:25, def:6, range:'远程', factions:['阵修'], desc:'后排布阵'},
+  {id:'demon3', name:'魔道散修', icon:'😈', cost:3, hp:120, atk:40, def:5, range:'近战', factions:['散修','魔修'], desc:'嗜血狂攻'},
+  {id:'alch3', name:'丹修长老', icon:'💊', cost:3, hp:100, atk:30, def:4, range:'远程', factions:['丹修'], desc:'大回复术'},
+  {id:'sword4', name:'元婴剑尊', icon:'⚡', cost:4, hp:200, atk:60, def:10, range:'近战', aoe:3, factions:['剑修'], desc:'万剑归宗·剑阵'},
+  {id:'array4', name:'护山大阵', icon:'🛐', cost:4, hp:180, atk:35, def:8, range:'远程', factions:['阵修'], desc:'群体护盾'},
+  {id:'demon4', name:'魔尊', icon:'👿', cost:4, hp:160, atk:55, def:7, range:'近战', aoe:2, factions:['魔修'], desc:'吸血魔功·魔焰'},
+  {id:'beast4', name:'上古妖王', icon:'🐯', cost:4, hp:220, atk:50, def:12, range:'近战', aoe:3, factions:['妖修'], desc:'妖气冲天·兽王咆哮'},
+  {id:'sword5', name:'化神剑神', icon:'☀️', cost:5, hp:280, atk:80, def:15, range:'近战', aoe:5, factions:['剑修','散修'], desc:'剑道巅峰·万剑诀'},
+  {id:'array5', name:'天道阵盘', icon:'💠', cost:5, hp:250, atk:55, def:12, range:'远程', aoe:3, factions:['阵修','符修'], desc:'阵法合一·天罗地网'},
+  {id:'demon5', name:'上古天魔', icon:'🔥', cost:5, hp:300, atk:75, def:14, range:'近战', aoe:5, factions:['魔修','妖修'], desc:'万魔之祖·灭世魔焰'},
   // ---- 新随从 ----
-  {id:'rune4', name:'Rune Grandmaster', icon:'🧧', cost:4, hp:130, atk:42, def:5, range:'Ranged', aoe:3, factions:['Rune Master'], desc:'万符归宗·千符阵'},
-  {id:'body3', name:'Body Grandmaster', icon:'🥋', cost:3, hp:200, atk:18, def:16, range:'Melee', factions:['Body Cult'], desc:'Vajra不坏'},
-  {id:'body4', name:'Diamond Body', icon:'🔱', cost:4, hp:260, atk:22, def:20, range:'Melee', factions:['Body Cult'], desc:'不动明王'},
-  {id:'alch2', name:'Alchemy Master', icon:'⚗️', cost:2, hp:80, atk:15, def:4, range:'Ranged', factions:['Alchemist'], desc:'炼丹高手'},
-  {id:'alch4', name:'Medicine King', icon:'🌾', cost:4, hp:120, atk:35, def:6, range:'Ranged', factions:['Alchemist'], desc:'妙手回春'},
-  {id:'scatter4', name:'Rogue Master', icon:'💫', cost:4, hp:100, atk:50, def:4, range:'Melee', aoe:2, factions:['Rogue'], desc:'一击必杀·暗器百发'},
-  {id:'array2', name:'Array Grandmaster', icon:'🔶', cost:2, hp:90, atk:18, def:5, range:'Ranged', factions:['Array Master'], desc:'布阵如神'},
-  {id:'beast3', name:'Fox Spirit', icon:'🦊', cost:3, hp:130, atk:30, def:6, range:'Ranged', factions:['Beast Cult'], desc:'狡猾如狐'},
-  // ---- Ghost Cult ----
-  {id:'ghost1', name:'Little Ghost', icon:'👻', cost:1, hp:45, atk:16, def:2, range:'Melee', factions:['Ghost Cult'], desc:'低语徘徊'},
-  {id:'ghost2', name:'Vengeful Spirit', icon:'💀', cost:2, hp:70, atk:24, def:3, range:'Ranged', factions:['Ghost Cult'], desc:'怨念缠绕'},
-  {id:'ghost3', name:'Ghost Reaper', icon:'🔗', cost:3, hp:110, atk:38, def:5, range:'Melee', aoe:2, factions:['Ghost Cult'], desc:'锁魂夺命'},
-  {id:'ghost4', name:'Ghost King', icon:'👑', cost:4, hp:180, atk:52, def:8, range:'Melee', aoe:3, factions:['Ghost Cult'], desc:'万鬼之王'},
-  {id:'ghost5', name:'Yama King', icon:'⚖️', cost:5, hp:260, atk:70, def:12, range:'Melee', aoe:5, factions:['Ghost Cult'], desc:'阎王审判'},
-  // ---- Buddha Sect ----
-  {id:'buddha1', name:'Novice Monk', icon:'🧘', cost:1, hp:65, atk:10, def:6, range:'Melee', factions:['Buddha Sect'], desc:'初入Buddha Sect'},
-  {id:'buddha2', name:'Martial Monk', icon:'🥊', cost:2, hp:110, atk:18, def:10, range:'Melee', factions:['Buddha Sect'], desc:'降龙伏虎'},
-  {id:'buddha3', name:'Arhat', icon:'🔔', cost:3, hp:140, atk:22, def:14, range:'Melee', factions:['Buddha Sect'], desc:'Arhat金身'},
-  {id:'buddha4', name:'Vajra', icon:'⚡', cost:4, hp:200, atk:30, def:18, range:'Melee', aoe:2, factions:['Buddha Sect'], desc:'怒目Vajra'},
-  {id:'buddha5', name:'Buddha', icon:'☸️', cost:5, hp:240, atk:35, def:20, range:'Ranged', factions:['Buddha Sect'], desc:'普度众生'},
+  {id:'rune4', name:'符修大师', icon:'🧧', cost:4, hp:130, atk:42, def:5, range:'远程', aoe:3, factions:['符修'], desc:'万符归宗·千符阵'},
+  {id:'body3', name:'体修宗师', icon:'🥋', cost:3, hp:200, atk:18, def:16, range:'近战', factions:['体修'], desc:'金刚不坏'},
+  {id:'body4', name:'金刚体修', icon:'🔱', cost:4, hp:260, atk:22, def:20, range:'近战', factions:['体修'], desc:'不动明王'},
+  {id:'alch2', name:'丹修大师', icon:'⚗️', cost:2, hp:80, atk:15, def:4, range:'远程', factions:['丹修'], desc:'炼丹高手'},
+  {id:'alch4', name:'药王', icon:'🌾', cost:4, hp:120, atk:35, def:6, range:'远程', factions:['丹修'], desc:'妙手回春'},
+  {id:'scatter4', name:'散修高手', icon:'💫', cost:4, hp:100, atk:50, def:4, range:'近战', aoe:2, factions:['散修'], desc:'一击必杀·暗器百发'},
+  {id:'array2', name:'阵法宗师', icon:'🔶', cost:2, hp:90, atk:18, def:5, range:'远程', factions:['阵修'], desc:'布阵如神'},
+  {id:'beast3', name:'妖狐', icon:'🦊', cost:3, hp:130, atk:30, def:6, range:'远程', factions:['妖修'], desc:'狡猾如狐'},
+  // ---- 鬼修 ----
+  {id:'ghost1', name:'小鬼', icon:'👻', cost:1, hp:45, atk:16, def:2, range:'近战', factions:['鬼修'], desc:'低语徘徊'},
+  {id:'ghost2', name:'怨灵', icon:'💀', cost:2, hp:70, atk:24, def:3, range:'远程', factions:['鬼修'], desc:'怨念缠绕'},
+  {id:'ghost3', name:'鬼差', icon:'🔗', cost:3, hp:110, atk:38, def:5, range:'近战', aoe:2, factions:['鬼修'], desc:'锁魂夺命'},
+  {id:'ghost4', name:'鬼王', icon:'👑', cost:4, hp:180, atk:52, def:8, range:'近战', aoe:3, factions:['鬼修'], desc:'万鬼之王'},
+  {id:'ghost5', name:'阎罗', icon:'⚖️', cost:5, hp:260, atk:70, def:12, range:'近战', aoe:5, factions:['鬼修'], desc:'阎王审判'},
+  // ---- 佛门 ----
+  {id:'buddha1', name:'沙弥', icon:'🧘', cost:1, hp:65, atk:10, def:6, range:'近战', factions:['佛门'], desc:'初入佛门'},
+  {id:'buddha2', name:'武僧', icon:'🥊', cost:2, hp:110, atk:18, def:10, range:'近战', factions:['佛门'], desc:'降龙伏虎'},
+  {id:'buddha3', name:'罗汉', icon:'🔔', cost:3, hp:140, atk:22, def:14, range:'近战', factions:['佛门'], desc:'罗汉金身'},
+  {id:'buddha4', name:'金刚', icon:'⚡', cost:4, hp:200, atk:30, def:18, range:'近战', aoe:2, factions:['佛门'], desc:'怒目金刚'},
+  {id:'buddha5', name:'佛陀', icon:'☸️', cost:5, hp:240, atk:35, def:20, range:'远程', factions:['佛门'], desc:'普度众生'},
 ];
 
 // 角色图片映射（按名称匹配，#1-#41对应01-41.png）
 const UNIT_IMG_MAP = {
-  'Qi Swordsman':'01.png','Foundation Sword':'02.png','Core Sword':'03.png','Nascent Sword Lord':'04.png','Divine Sword God':'05.png',
-  'Qi Body Cult':'06.png','Foundation Body':'07.png','Body Grandmaster':'08.png','Diamond Body':'09.png',
-  'Rogue Apprentice':'10.png','Rune Master':'11.png','Dark Rogue':'12.png','Rogue Master':'13.png',
-  'Core Rune Master':'15.png','Rune Grandmaster':'16.png',
-  'Heaven Array':'17.png','Alch Apprentice':'18.png','Alchemy Master':'19.png','Alchemy Elder':'20.png',
-  'Medicine King':'21.png','Array Grandmaster':'22.png','Array Master':'23.png','Mountain Array':'24.png',
-  'Fallen Rogue':'25.png','Demon Lord':'26.png','Ancient Demon':'27.png',
-  'Beast Cub':'28.png','Wild Beast':'29.png','Fox Spirit':'30.png','Ancient Beast King':'31.png',
-  'Little Ghost':'32.png','Vengeful Spirit':'33.png','Ghost Reaper':'34.png','Ghost King':'35.png','Yama King':'36.png',
-  'Novice Monk':'37.png','Martial Monk':'38.png','Arhat':'39.png','Vajra':'40.png','Buddha':'41.png',
+  '练气剑修':'01.png','筑基剑修':'02.png','金丹剑修':'03.png','元婴剑尊':'04.png','化神剑神':'05.png',
+  '练气体修':'06.png','筑基体修':'07.png','体修宗师':'08.png','金刚体修':'09.png',
+  '散修学徒':'10.png','符修':'11.png','魔道散修':'12.png','散修高手':'13.png',
+  '金丹符师':'15.png','符修大师':'16.png',
+  '天道阵盘':'17.png','丹童':'18.png','丹修大师':'19.png','丹修长老':'20.png',
+  '药王':'21.png','阵法宗师':'22.png','阵修':'23.png','护山大阵':'24.png',
+  '入魔散修':'25.png','魔尊':'26.png','上古天魔':'27.png',
+  '灵兽幼崽':'28.png','妖兽':'29.png','妖狐':'30.png','上古妖王':'31.png',
+  '小鬼':'32.png','怨灵':'33.png','鬼差':'34.png','鬼王':'35.png','阎罗':'36.png',
+  '沙弥':'37.png','武僧':'38.png','罗汉':'39.png','金刚':'40.png','佛陀':'41.png',
 };
 UNITS.forEach(u => u.img = 'units/' + (UNIT_IMG_MAP[u.name] || ''));
 
@@ -343,46 +343,46 @@ function unitIcon(u) {
 }
 
 const FACTIONS = {
-  'Swordsman':{icon:'⚔️',desc:'ATK',t1:'+30%ATK',t2:'+60%ATK',t3:'+100%ATK, ATKNone视20%DEF'},
-  'Body Cult':{icon:'🛡️',desc:'HP',t1:'+30%HP',t2:'+60%HP',t3:'+100%HP, 受到伤害反弹15%'},
-  'Rogue':{icon:'🌀',desc:'Crit',t1:'+20%Crit',t2:'+40%Crit, Crit伤害x2.5',t3:'+60%Crit, Crit时恢复20%伤害'},
-  'Rune Master':{icon:'📜',desc:'法攻',t1:'+30%法术伤害',t2:'+60%法术伤害, ATK燃烧Enemy5%当前HP',t3:'None视DEF'},
-  'Alchemist':{icon:'💊',desc:'Regen',t1:'每Reincarnate15%最大HP',t2:'每Reincarnate25%最大HP, 溢出变Shield',t3:'首次濒死满血复活一次'},
-  'Array Master':{icon:'🔷',desc:'Shield',t1:'开局Shield20%最大HP',t2:'开局Shield35%, 每RoundRefresh',t3:'Shield存在时Thorns30%'},
-  'Demon Cult':{icon:'👿',desc:'Lifesteal',t1:'+25%Lifesteal',t2:'+40%Lifesteal, 击杀回复20%最大HP',t3:'Lifesteal溢出变永久最大HP'},
-  'Beast Cult':{icon:'🐲',desc:'Speed',t1:'+25%Speed',t2:'+50%Speed, Dodge15%',t3:'+75%Speed'},
-  'Ghost Cult':{icon:'👻',desc:'诅咒',t1:'+20%伤害加深',t2:'+40%伤害加深,击杀招魂',t3:'+60%伤害加深,Enemy全体减攻'},
-  'Buddha Sect':{icon:'🙏',desc:'慈悲',t1:'+20%Shield',t2:'+40%Shield,每RoundRegen',t3:'+60%Shield,全体None敌一刻'},
+  '剑修':{icon:'⚔️',desc:'攻击力',t1:'+30%攻击力',t2:'+60%攻击力',t3:'+100%攻击力, 攻击无视20%防御'},
+  '体修':{icon:'🛡️',desc:'生命值',t1:'+30%生命值',t2:'+60%生命值',t3:'+100%生命值, 受到伤害反弹15%'},
+  '散修':{icon:'🌀',desc:'暴击',t1:'+20%暴击率',t2:'+40%暴击率, 暴击伤害x2.5',t3:'+60%暴击率, 暴击时恢复20%伤害'},
+  '符修':{icon:'📜',desc:'法攻',t1:'+30%法术伤害',t2:'+60%法术伤害, 攻击燃烧敌方5%当前生命',t3:'无视防御'},
+  '丹修':{icon:'💊',desc:'回血',t1:'每轮回15%最大生命',t2:'每轮回25%最大生命, 溢出变护盾',t3:'首次濒死满血复活一次'},
+  '阵修':{icon:'🔷',desc:'护盾',t1:'开局护盾20%最大生命',t2:'开局护盾35%, 每回合刷新',t3:'护盾存在时反伤30%'},
+  '魔修':{icon:'👿',desc:'吸血',t1:'+25%吸血',t2:'+40%吸血, 击杀回复20%最大生命',t3:'吸血溢出变永久最大生命'},
+  '妖修':{icon:'🐲',desc:'攻速',t1:'+25%攻速',t2:'+50%攻速, 闪避15%',t3:'+75%攻速'},
+  '鬼修':{icon:'👻',desc:'诅咒',t1:'+20%伤害加深',t2:'+40%伤害加深,击杀招魂',t3:'+60%伤害加深,敌方全体减攻'},
+  '佛门':{icon:'🙏',desc:'慈悲',t1:'+20%护盾',t2:'+40%护盾,每回合回血',t3:'+60%护盾,全体无敌一刻'},
 };
 
-// Counter系统
+// 克制系统
 const COUNTERS = {
-  'Swordsman':'Body Cult',
-  'Body Cult':'Rogue',
-  'Rogue':'Swordsman',
-  'Rune Master':'Array Master',
-  'Array Master':'Beast Cult',
-  'Beast Cult':'Rune Master',
-  'Alchemist':'Demon Cult',
-  'Demon Cult':'Alchemist',
-  'Ghost Cult':'Buddha Sect',
-  'Buddha Sect':'Ghost Cult',
+  '剑修':'体修',
+  '体修':'散修',
+  '散修':'剑修',
+  '符修':'阵修',
+  '阵修':'妖修',
+  '妖修':'符修',
+  '丹修':'魔修',
+  '魔修':'丹修',
+  '鬼修':'佛门',
+  '佛门':'鬼修',
 };
 
-// 种族Synergies（跨门派）
+// 种族羁绊（跨门派）
 const CROSS_SYNS = [
-  {id:'iron_wall', facs:['Swordsman','Body Cult'], need:2, icon:'⛓️', name:'Iron Wall', desc:'Swordsman+Body Cult各2: Thorns+10%, ATK+15%'},
-  {id:'spell_array', facs:['Rune Master','Array Master'], need:2, icon:'🔮', name:'灵阵', desc:'Rune Master+Array Master各2: 法攻+20%, Shield+15%'},
-  {id:'fairy_edge', facs:['Alchemist','Rogue'], need:2, icon:'✨', name:'Fairy Edge', desc:'Alchemist+Rogue各2: Regen+10%, Crit+10%'},
-  {id:'demon_beast', facs:['Demon Cult','Beast Cult'], need:2, icon:'🌪️', name:'魔性', desc:'Demon Cult+Beast Cult各2: Lifesteal+15%, Speed+15%'},
-  {id:'sword_rune', facs:['Swordsman','Rune Master'], need:2, icon:'⚡', name:'剑气', desc:'Swordsman+Rune Master各2: None视20%DEF'},
-  {id:'body_alch', facs:['Body Cult','Alchemist'], need:2, icon:'🌿', name:'长生', desc:'Body Cult+Alchemist各2: 每Reincarnate血+10%'},
-  {id:'ghost_buddha', facs:['Ghost Cult','Buddha Sect'], need:2, icon:'☯️', name:'Reincarnate', desc:'Ghost Cult+Buddha Sect各2: 击杀Regen+20%'},
-  {id:'sword_ghost', facs:['Swordsman','Ghost Cult'], need:2, icon:'⚔️', name:'冥剑', desc:'Swordsman+Ghost Cult各2: ATK附带10%Lifesteal'},
-  {id:'buddha_body', facs:['Buddha Sect','Body Cult'], need:2, icon:'🧘', name:'金身', desc:'Buddha Sect+Body Cult各2: Shield+20%'},
+  {id:'iron_wall', facs:['剑修','体修'], need:2, icon:'⛓️', name:'铁壁', desc:'剑修+体修各2: 反伤+10%, 攻击+15%'},
+  {id:'spell_array', facs:['符修','阵修'], need:2, icon:'🔮', name:'灵阵', desc:'符修+阵修各2: 法攻+20%, 护盾+15%'},
+  {id:'fairy_edge', facs:['丹修','散修'], need:2, icon:'✨', name:'仙缘', desc:'丹修+散修各2: 回血+10%, 暴击+10%'},
+  {id:'demon_beast', facs:['魔修','妖修'], need:2, icon:'🌪️', name:'魔性', desc:'魔修+妖修各2: 吸血+15%, 攻速+15%'},
+  {id:'sword_rune', facs:['剑修','符修'], need:2, icon:'⚡', name:'剑气', desc:'剑修+符修各2: 无视20%防御'},
+  {id:'body_alch', facs:['体修','丹修'], need:2, icon:'🌿', name:'长生', desc:'体修+丹修各2: 每轮回血+10%'},
+  {id:'ghost_buddha', facs:['鬼修','佛门'], need:2, icon:'☯️', name:'轮回', desc:'鬼修+佛门各2: 击杀回血+20%'},
+  {id:'sword_ghost', facs:['剑修','鬼修'], need:2, icon:'⚔️', name:'冥剑', desc:'剑修+鬼修各2: 攻击附带10%吸血'},
+  {id:'buddha_body', facs:['佛门','体修'], need:2, icon:'🧘', name:'金身', desc:'佛门+体修各2: 护盾+20%'},
 ];
 
-// ---- 阵型系统 ----
+// ---- Formation系统 ----
 // 棋盘索引: 行0=0-5(前排) 行1=6-11(中排) 行2=12-17(后排)
 const FORMATIONS = [
   {id:'arrow', name:'Arrow Formation', icon:'⚡', 
@@ -397,7 +397,7 @@ const FORMATIONS = [
      return 0;
    }},
   {id:'vshape', name:'V-Formation', icon:'🦅',
-   desc:'Diagonal placement',
+   desc:'Diagonal站位',
    bonus:{critRate:0.2, critMult:2.5},
    score:(board)=>{
      const diag=[
@@ -409,14 +409,14 @@ const FORMATIONS = [
      return cnt*8;
    }},
   {id:'circle', name:'Circle Formation', icon:'⭕',
-   desc:'3 rows, each ≥2',
+   desc:'3 Rows ≥2人',
    bonus:{hpMult:1.25},
    score:(board)=>{
      const rows=[0,1,2].map(r=>board.slice(r*6,r*6+6).filter(u=>u).length);
      return rows.every(r=>r>=2) ? rows[0]*3+rows[1]*2+rows[2]+5 : (rows.every(r=>r>=1) ? rows[0]+rows[1]+rows[2] : 0);
    }},
   {id:'line', name:'Line Formation', icon:'📏',
-   desc:'Same row ≥3',
+   desc:'Same Row ≥3人',
    bonus:{spdMult:0.15},
    score:(board)=>{
      const rows=[0,1,2].map(r=>board.slice(r*6,r*6+6).filter(u=>u).length);
@@ -426,7 +426,7 @@ const FORMATIONS = [
      return 0;
    }},
   {id:'wedge', name:'Wedge Formation', icon:'🔺',
-   desc:'Center columns > Edges',
+   desc:'Center Columns > Edges（差值越大分越高）',
    bonus:{armorPen:0.2},
    score:(board)=>{
      const mid=[1,2,3,4,7,8,9,10,13,14,15,16].filter(i=>board[i]).length;
@@ -435,7 +435,7 @@ const FORMATIONS = [
      return diff>0 ? diff*3 + Math.min(mid,6) : 0;
    }},
   {id:'scatter', name:'Scatter Formation', icon:'🌪️',
-   desc:'≥5 columns filled',
+   desc:'≥5 columns',
    bonus:{dodge:0.15},
    score:(board)=>{
      const cols=[0,1,2,3,4,5].map(c=>[c,c+6,c+12].filter(i=>board[i]).length);
@@ -469,48 +469,48 @@ function applyFormation(units, formation, isEnemy){
 
 // BOSS 定义仅用于创建BOSS单位，具体数值在STAGE_CONFIG中
 const BOSSES = [
-  {round:3, name:'练气Wild Beast', icon:'🐗'},
-  {round:7, name:'Foundation Demon', icon:'👹'},
-  {round:12, name:'Core Sword Lord', icon:'⚡'},
-  {round:17, name:'Nascent Demon', icon:'🔥'},
-  {round:23, name:'Divine Beast King', icon:'🐯'},
-  {round:29, name:'Fusion Celestial', icon:'👿'},
-  {round:36, name:'Great Demon', icon:'💀'},
-  {round:43, name:'Tribulation Lord', icon:'☀️'},
-  {round:51, name:'Immortal Emperor', icon:'👑'},
-  {round:59, name:'Golden Immortal Lord', icon:'🌌'},
-  {round:68, name:'Great Luo Ancestor', icon:'♾️'},
-  {round:77, name:'Heavenly Avatar', icon:'🏯'},
+  {round:3, name:'练气妖兽', icon:'🐗'},
+  {round:7, name:'筑基魔修', icon:'👹'},
+  {round:12, name:'金丹剑尊', icon:'⚡'},
+  {round:17, name:'元婴天魔', icon:'🔥'},
+  {round:23, name:'化神妖王', icon:'🐯'},
+  {round:29, name:'合体天尊', icon:'👿'},
+  {round:36, name:'大乘古魔', icon:'💀'},
+  {round:43, name:'渡劫真君', icon:'☀️'},
+  {round:51, name:'真仙大帝', icon:'👑'},
+  {round:59, name:'金仙尊主', icon:'🌌'},
+  {round:68, name:'大罗道祖', icon:'♾️'},
+  {round:77, name:'天道化身', icon:'🏯'},
 ];
 
 const ARTIFACTS = [
-  {id:'hp_up', name:'修炼仙丹', icon:'💊', desc:'全单位+15%HP'},
-  {id:'atk_up', name:'神兵利器', icon:'⚔️', desc:'全单位+15%ATK'},
-  {id:'shield', name:'护体金钟', icon:'🛡️', desc:'开局全单位+20Shield'},
-  {id:'lifesteal', name:'嗜血魔功', icon:'🩸', desc:'全单位+15%Lifesteal'},
-  {id:'dodge', name:'疾风步法', icon:'💨', desc:'全单位+12%Dodge'},
-  {id:'armor_pen', name:'破甲利刃', icon:'🗡️', desc:'ATKNone视10点DEF'},
-  {id:'gold_bonus', name:'灵石宝库', icon:'💎', desc:'每rounds额外+5灵石'},
-  {id:'regen', name:'生机之泉', icon:'🌿', desc:'每Reincarnate复15%HP'},
-  {id:'rage', name:'狂暴之心', icon:'🔥', desc:'击杀+3%ATK(本局叠加)'},
-  {id:'frost', name:'寒冰领域', icon:'❄️', desc:'ATK减速敌人20%'},
-  {id:'double_strike', name:'连击符印', icon:'⚡', desc:'15%概率ATK两次'},
+  {id:'hp_up', name:'修炼仙丹', icon:'💊', desc:'全单位+15%生命值'},
+  {id:'atk_up', name:'神兵利器', icon:'⚔️', desc:'全单位+15%攻击力'},
+  {id:'shield', name:'护体金钟', icon:'🛡️', desc:'开局全单位+20护盾'},
+  {id:'lifesteal', name:'嗜血魔功', icon:'🩸', desc:'全单位+15%吸血'},
+  {id:'dodge', name:'疾风步法', icon:'💨', desc:'全单位+12%闪避'},
+  {id:'armor_pen', name:'破甲利刃', icon:'🗡️', desc:'攻击无视10点防御'},
+  {id:'gold_bonus', name:'灵石宝库', icon:'💎', desc:'每轮额外+5灵石'},
+  {id:'regen', name:'生机之泉', icon:'🌿', desc:'每轮回复15%生命'},
+  {id:'rage', name:'狂暴之心', icon:'🔥', desc:'击杀+3%攻击(本局叠加)'},
+  {id:'frost', name:'寒冰领域', icon:'❄️', desc:'攻击减速敌人20%'},
+  {id:'double_strike', name:'连击符印', icon:'⚡', desc:'15%概率攻击两次'},
   {id:'thorns_armor', name:'荆棘之甲', icon:'🌵', desc:'反弹受到的30%伤害'},
-  {id:'soul_reap', name:'噬魂法杖', icon:'🔮', desc:'击杀回复15%最大HP'},
-  {id:'divine_shield', name:'天神护体', icon:'👼', desc:'首次濒死None敌一Round'},
-  {id:'execute', name:'斩龙刃', icon:'💀', desc:'ATK30%以下HP直接Execute'},
-  {id:'infinity', name:'None限法球', icon:'♾️', desc:'每RoundATK+5%(None限叠加)'},
-  // ---- 新Artifacts ----
-  {id:'blood_magic', name:'血魔大法', icon:'🩸', desc:'每损失10%HP+3%Lifesteal'},
+  {id:'soul_reap', name:'噬魂法杖', icon:'🔮', desc:'击杀回复15%最大生命'},
+  {id:'divine_shield', name:'天神护体', icon:'👼', desc:'首次濒死无敌一回合'},
+  {id:'execute', name:'斩龙刃', icon:'💀', desc:'攻击30%以下生命直接斩杀'},
+  {id:'infinity', name:'无限法球', icon:'♾️', desc:'每回合攻击力+5%(无限叠加)'},
+  // ---- 新神器 ----
+  {id:'blood_magic', name:'血魔大法', icon:'🩸', desc:'每损失10%生命+3%吸血'},
   {id:'thunder_strike', name:'天雷引', icon:'⚡', desc:'15%概率眩晕(伤害+50%)'},
-  {id:'iron_will', name:'护心镜', icon:'🛡️', desc:'前3Round受到伤害减半'},
-  {id:'first_strike', name:'先发制人', icon:'⏫', desc:'首RoundATK+30%'},
-  {id:'bag_of_holding', name:'乾坤袋', icon:'👜', desc:'Refresh商店费用-1(最少1)'},
-  {id:'demon_slayer', name:'破魔符', icon:'😈', desc:'对Demon Cult+100%伤害'},
-  {id:'precision', name:'灵犀指', icon:'🎯', desc:'每3次ATK下一击3倍'},
+  {id:'iron_will', name:'护心镜', icon:'🛡️', desc:'前3回合受到伤害减半'},
+  {id:'first_strike', name:'先发制人', icon:'⏫', desc:'首回合攻击+30%'},
+  {id:'bag_of_holding', name:'乾坤袋', icon:'👜', desc:'刷新商店费用-1(最少1)'},
+  {id:'demon_slayer', name:'破魔符', icon:'😈', desc:'对魔修+100%伤害'},
+  {id:'precision', name:'灵犀指', icon:'🎯', desc:'每3次攻击下一击3倍'},
   {id:'undying', name:'不灭金身', icon:'🌟', desc:'30%血以下减伤50%'},
-  {id:'mana_gem', name:'聚灵阵', icon:'💠', desc:'每rounds额外+2灵石'},
-  {id:'shadow_clone', name:'影分身', icon:'👤', desc:'10%Dodge并反击30%伤害'},
+  {id:'mana_gem', name:'聚灵阵', icon:'💠', desc:'每轮额外+2灵石'},
+  {id:'shadow_clone', name:'影分身', icon:'👤', desc:'10%闪避并反击30%伤害'},
 ];
 
 let G = {};
@@ -544,7 +544,7 @@ function createBgParticles(){
   const im=document.createElement('div');im.className='ink-mtn';w.appendChild(im);
 }
 
-// ---- Reincarnate/段位/成就系统 ----
+// ---- 轮回/段位/成就系统 ----
 const RANK_NAMES=['青铜','白银','黄金','钻石','王者'];
 const RANK_THRESH=[5,10,18,25,30];
 function getRank(round){let r=0;for(let i=0;i<RANK_THRESH.length;i++){if(round>=RANK_THRESH[i])r=i+1;}return Math.min(r,5);}
@@ -554,16 +554,16 @@ function loadData(){try{const d=JSON.parse(localStorage.getItem('yxsave'));if(d)
 function getRebirthBonus(){const lv=G.rebirthLevel||0;return{hpMult:1+lv*0.03,atkMult:1+lv*0.03,goldBonus:Math.floor(lv/3)};}
 
 const ACHIEVEMENTS=[
-  {id:'first_win',name:'初战告捷',desc:'+第一场Victory',icon:'🎖️',check:()=>G.totalWins>=1},
-  {id:'round_10',name:'筑基成功',desc:'到达第10rounds',icon:'🏔️',check:()=>G.round>=10},
-  {id:'round_20',name:'元婴强者',desc:'到达第20rounds',icon:'⚡',check:()=>G.round>=20},
-  {id:'round_30',name:'渡劫飞升',desc:'到达第30rounds',icon:'☀️',check:()=>G.round>=30},
+  {id:'first_win',name:'初战告捷',desc:'获得第一场胜利',icon:'🎖️',check:()=>G.totalWins>=1},
+  {id:'round_10',name:'筑基成功',desc:'到达第10轮',icon:'🏔️',check:()=>G.round>=10},
+  {id:'round_20',name:'元婴强者',desc:'到达第20轮',icon:'⚡',check:()=>G.round>=20},
+  {id:'round_30',name:'渡劫飞升',desc:'到达第30轮',icon:'☀️',check:()=>G.round>=30},
   {id:'kill_50',name:'百人斩',desc:'累计击杀50敌',icon:'💀',check:()=>(G.totalKills||0)+(G.enemyKilled||0)>=50},
   {id:'kill_200',name:'千军破',desc:'累计击杀200敌',icon:'☠️',check:()=>(G.totalKills||0)+(G.enemyKilled||0)>=200},
-  {id:'star3',name:'三星拱照',desc:'合成一3星',icon:'⭐',check:()=>G.board.some(u=>u&&u.star>=3)||G.bench.some(u=>u&&u.star>=3)},
+  {id:'star3',name:'三星拱照',desc:'合成一个3星',icon:'⭐',check:()=>G.board.some(u=>u&&u.star>=3)||G.bench.some(u=>u&&u.star>=3)},
   {id:'boss_kill',name:'斩妖除魔',desc:'击败BOSS',icon:'👑',check:()=>G.bossKilled>0},
-  {id:'streak_5',name:'势如破竹',desc:'5Streak',icon:'🔥',check:()=>G.streak>=5},
-  {id:'artifact_3',name:'Artifacts收集者',desc:'+3Artifacts',icon:'🏺',check:()=>(G.artifacts||[]).length>=3},
+  {id:'streak_5',name:'势如破竹',desc:'5连胜',icon:'🔥',check:()=>G.streak>=5},
+  {id:'artifact_3',name:'神器收集者',desc:'获得3件神器',icon:'🏺',check:()=>(G.artifacts||[]).length>=3},
   {id:'full_board',name:'满堂红',desc:'上满9人',icon:'📦',check:()=>G.board.filter(u=>u!==null).length>=9},
 ];
 function checkAchievements(){G.achievements=G.achievements||[];for(const a of ACHIEVEMENTS){if(!G.achievements.includes(a.id)&&a.check()){G.achievements.push(a.id);addBL('🏆 成就: '+a.icon+a.name,'info');}}saveData();}
@@ -573,7 +573,7 @@ function showRebirthPanel(){
   G.highestRound=Math.max(G.highestRound||0,G.round);
   checkAchievements();saveData();
   const lv=G.rebirthLevel||0;const bonus=getRebirthBonus();
-  document.getElementById('resultContent').innerHTML='<h2 style=\"color:#b388ff;\">🔄 Reincarnate</h2><div style=\"color:#aaa;margin:8px 0;\">达到第'+(G.highestRound)+'rounds</div><div style=\"color:#ffd700;font-size:16px;\">+'+(points)+' Reincarnate点数</div><div style=\"margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.1);\"><div style=\"color:#888;font-size:12px;\">ReincarnateLevel: '+lv+'级</div><div style=\"color:#888;font-size:12px;\">❤️+'+(Math.round((bonus.hpMult-1)*100))+'% 🗡️+'+(Math.round((bonus.atkMult-1)*100))+'%</div><div style=\"color:#aaa;font-size:12px;margin-top:4px;\">点数: '+(G.rebirthPoints)+'</div></div>';
+  document.getElementById('resultContent').innerHTML='<h2 style=\"color:#b388ff;\">🔄 轮回</h2><div style=\"color:#aaa;margin:8px 0;\">达到第'+(G.highestRound)+'轮</div><div style=\"color:#ffd700;font-size:16px;\">+'+(points)+' 轮回点数</div><div style=\"margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.1);\"><div style=\"color:#888;font-size:12px;\">轮回等级: '+lv+'级</div><div style=\"color:#888;font-size:12px;\">❤️+'+(Math.round((bonus.hpMult-1)*100))+'% 🗡️+'+(Math.round((bonus.atkMult-1)*100))+'%</div><div style=\"color:#aaa;font-size:12px;margin-top:4px;\">点数: '+(G.rebirthPoints)+'</div></div>';
   if(G.achievements&&G.achievements.length){let ahtml='';for(const id of G.achievements){const a=ACHIEVEMENTS.find(x=>x.id===id);if(a)ahtml+=a.icon+' '+a.name+' ';}'<div style=\"margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.1);color:#ffd700;font-size:12px;\">🏆 '+ahtml+'</div>';}
   document.getElementById('battleDoneBtn').textContent='重新渡劫';
   document.getElementById('battleDoneBtn').onclick=function(){document.getElementById('resultOverlay').style.display='none';initGame();};
@@ -646,7 +646,7 @@ function initGame() {
   G.enemiesDefeated = false;
   G.adUsedThisRound = false;
   G.bossKilled=0;G.enemyKilled=0;G.totalKills=0;G.totalWins=0;G.gameMode=G.gameMode||'normal';
-  // None尽模式不重置最高记录
+  // 无尽模式不重置最高记录
   if(G.gameMode!=='endless'){G.highestRound=0;G.rebirthPoints=0;G.rebirthLevel=0;G.achievements=[];}
   loadData();
   generateEnemyBoard(); // 开局就生成敌人，备战可见
@@ -713,7 +713,7 @@ function buyUnit(idx) {
   const si=G.bench.findIndex(x=>x&&x.id===u.id&&x.star===1);
   if(si>=0){
     G.bench[si]={...G.bench[si],star:2,hp:Math.floor(G.bench[si].hp*1.8),atk:Math.floor(G.bench[si].atk*1.8)};
-    G.shop.splice(idx,1);addBL(`⭐ ${u.name} →★★`,'info');
+    G.shop.splice(idx,1);addBL(`⭐ ${u.name} 升为★★`,'info');
     // 检查是否可升3星
     if(tryMerge3star(u,nu))return;
     renderAll();return;
@@ -721,11 +721,11 @@ function buyUnit(idx) {
   const bi=G.board.findIndex(x=>x&&x.id===u.id&&x.star===1);
   if(bi>=0){
     G.board[bi]={...G.board[bi],star:2,hp:Math.floor(G.board[bi].hp*1.8),atk:Math.floor(G.board[bi].atk*1.8)};
-    G.shop.splice(idx,1);addBL(`⭐ 场上${u.name} →★★`,'info');
+    G.shop.splice(idx,1);addBL(`⭐ 场上${u.name} 升为★★`,'info');
     if(tryMerge3star(u,nu))return;
     renderAll();return;
   }
-  // 32星合并为3星
+  // 3个2星合并为3星
   if(tryMerge3star(u,nu))return;
   G.bench.push(nu);G.shop.splice(idx,1);addBL(`🛒 购买${u.name}`,'info');SFX.buy();renderAll();
 }
@@ -761,7 +761,7 @@ function tryMerge3star(u,nu){
   if(removed<3){const need=3-removed;for(let i=0;i<need&&i<idxsBd.length;i++){G.board[idxsBd[i]]=null;}}
   G.bench=G.bench.filter(x=>x!==null);
   G.bench.push({...nu,star:3,hp:Math.floor(u.hp*3.2),atk:Math.floor(u.atk*3.2)});
-  addBL(`⭐⭐ ${u.name} →★★★!`,'info');SFX.levelUp();
+  addBL(`⭐⭐ ${u.name} 升为★★★!`,'info');SFX.levelUp();
   return true;
 }
 
@@ -769,12 +769,12 @@ function levelUp(){
   if(G.gold<4)return;
   G.gold-=4;G.exp++;G.expPurchased++;
   const pct=Math.round((getLevelBonus()-1)*100);
-  addBL(`📊 强化 +2% (Total+${pct}%)`,'info');
+  addBL(`📊 强化 +2% (共+${pct}%)`,'info');
   if(G.exp>=G.expMax){
     G.level++;
     G.exp=0;
     G.expMax=Math.min(G.level+3,10);
-    addBL(`📊 Level提升 ${G.level}⭐ 上阵人数+1`,'info');SFX.levelUp();
+    addBL(`📊 等级提升 ${G.level}⭐ 上阵人数+1`,'info');SFX.levelUp();
   }
   renderAll();
 }
@@ -851,7 +851,7 @@ const SFX = {
     [262,294,330,392, 440,523,587,523, 440,392,330,262, 294,330,392,262],
   ],
   _bgmRhythm_prepare:[
-    // 每拍: 0=None声, 1=主旋律, 2=低音, 3=鼓, 4=琶音
+    // 每拍: 0=无声, 1=主旋律, 2=低音, 3=鼓, 4=琶音
     0,0,0,0, 1,0,1,0, 1,0,1,0, 1,0,1,0,
     1,0,1,0, 0,0,1,0, 1,0,1,0, 1,0,1,2,
     1,0,1,2, 1,0,1,0, 1,0,1,2, 1,0,1,0,
@@ -979,35 +979,35 @@ const SFX = {
 try{SFX._init();}catch(e){}
 
 // ---- 12大关卡系统 ----
-// 12大关卡，每大关卡有若干小关，最后一小关为BOSS
+// 12个大关卡，每个大关卡有若干小关，最后一个小关为BOSS
 const STAGE_CONFIG = [
-  {id:1, name:'Qi Refining', rounds:3, color:'#8a8', desc:'初入修仙，适应战斗',
+  {id:1, name:'练气期', rounds:3, color:'#8a8', desc:'初入修仙，适应战斗',
    enemyHp:1.0, enemyAtk:1.0, enemyDef:1.0, enemyStar:0, bossHp:250, bossAtk:18, bossDef:5},
-  {id:2, name:'Foundation Stage', rounds:4, color:'#8cf', desc:'筑基成功，小试牛刀',
+  {id:2, name:'筑基期', rounds:4, color:'#8cf', desc:'筑基成功，小试牛刀',
    enemyHp:1.2, enemyAtk:1.1, enemyDef:1.0, enemyStar:0, bossHp:700, bossAtk:40, bossDef:12},
-  {id:3, name:'Golden Core', rounds:5, color:'#ffd700', desc:'⚠️ 敌人开始运用阵型',
+  {id:3, name:'金丹期', rounds:5, color:'#ffd700', desc:'⚠️ 敌人开始运用Formation',
    enemyHp:1.5, enemyAtk:1.4, enemyDef:1.2, enemyStar:1, bossHp:1200, bossAtk:60, bossDef:18},
-  {id:4, name:'Nascent Soul', rounds:5, color:'#f66', desc:'⚠️ 敌人阵型成熟+Counter',
+  {id:4, name:'元婴期', rounds:5, color:'#f66', desc:'⚠️ 敌人Formation成熟+克制',
    enemyHp:1.8, enemyAtk:1.7, enemyDef:1.5, enemyStar:1, bossHp:2000, bossAtk:85, bossDef:25},
-  {id:5, name:'Divine Form', rounds:6, color:'#f4f', desc:'🔥 精打细算，否则寸步难行',
+  {id:5, name:'化神期', rounds:6, color:'#f4f', desc:'🔥 精打细算，否则寸步难行',
    enemyHp:2.2, enemyAtk:2.0, enemyDef:1.8, enemyStar:2, bossHp:3200, bossAtk:120, bossDef:35},
-  {id:6, name:'Body Fusion', rounds:6, color:'#ff4500', desc:'🔥 阵型Counter缺一不可',
+  {id:6, name:'合体期', rounds:6, color:'#ff4500', desc:'🔥 Formation克制缺一不可',
    enemyHp:2.8, enemyAtk:2.5, enemyDef:2.2, enemyStar:2, bossHp:5000, bossAtk:170, bossDef:48},
-  {id:7, name:'Great Vehicle', rounds:7, color:'#dc143c', desc:'💀 失误即败',
+  {id:7, name:'大乘期', rounds:7, color:'#dc143c', desc:'💀 失误即败',
    enemyHp:3.5, enemyAtk:3.2, enemyDef:2.8, enemyStar:2, bossHp:7500, bossAtk:240, bossDef:65},
-  {id:8, name:'Tribulation', rounds:7, color:'#8b0000', desc:'💀 每一步都致命',
+  {id:8, name:'渡劫期', rounds:7, color:'#8b0000', desc:'💀 每一步都致命',
    enemyHp:4.5, enemyAtk:4.0, enemyDef:3.5, enemyStar:3, bossHp:11000, bossAtk:330, bossDef:85},
-  {id:9, name:'True Immortal', rounds:8, color:'#9400d3', desc:'☠️ 地狱难度',
+  {id:9, name:'真仙期', rounds:8, color:'#9400d3', desc:'☠️ 地狱难度',
    enemyHp:5.5, enemyAtk:5.0, enemyDef:4.5, enemyStar:3, bossHp:16000, bossAtk:450, bossDef:110},
-  {id:10, name:'Golden Immortal', rounds:8, color:'#4b0082', desc:'☠️ 九死一生',
+  {id:10, name:'金仙期', rounds:8, color:'#4b0082', desc:'☠️ 九死一生',
    enemyHp:7.0, enemyAtk:6.5, enemyDef:5.5, enemyStar:3, bossHp:24000, bossAtk:600, bossDef:140},
-  {id:11, name:'Great Luo', rounds:9, color:'#2f004f', desc:'💀 天道None情',
+  {id:11, name:'大罗期', rounds:9, color:'#2f004f', desc:'💀 天道无情',
    enemyHp:9.0, enemyAtk:8.0, enemyDef:7.0, enemyStar:3, bossHp:36000, bossAtk:800, bossDef:180},
-  {id:12, name:'Heavenly Dao', rounds:9, color:'#ffd700', desc:'🏆 最后一战',
+  {id:12, name:'天道期', rounds:9, color:'#ffd700', desc:'🏆 最后一战',
    enemyHp:12.0, enemyAtk:10.0, enemyDef:9.0, enemyStar:3, bossHp:50000, bossAtk:1000, bossDef:220},
 ];
 
-// 计算总rounds数和各阶段边界
+// 计算总轮数和各阶段边界
 (function(){
   var total=0;
   for(var i=0;i<STAGE_CONFIG.length;i++){
@@ -1033,46 +1033,46 @@ function isBossRound(round){
   return false;
 }
 
-// 预置阵型（每小关的Enemy固定布局）
-// 阵型用棋盘索引0-17表示Enemy站位
+// 预置Formation（每个小关的敌方固定布局）
+// Formation用棋盘索引0-17表示敌方站位
 // 行0=前排(0-5) 行1=中排(6-11) 行2=后排(12-17)
 const BATTLE_FORMATIONS = {
-  // 阶段1: Qi Refining（3小关）
-  1:{count:1, slots:[0]},           // 1前排
-  2:{count:2, slots:[0,1]},         // 2前排
+  // 阶段1: 练气期（3小关）
+  1:{count:1, slots:[0]},           // 1个前排
+  2:{count:2, slots:[0,1]},         // 2个前排
   3:{count:3, slots:[0,1,6], boss:true}, // BOSS+4小兵
-  // 阶段2: Foundation Stage（4小关）
+  // 阶段2: 筑基期（4小关）
   4:{count:3, slots:[0,2,7]},
   5:{count:4, slots:[0,2,6,8]},
   6:{count:4, slots:[1,3,7,9]},
   7:{count:5, slots:[0,2,6,8,12], boss:true},
-  // 阶段3: Golden Core（5小关）——开始有阵型
+  // 阶段3: 金丹期（5小关）——开始有Formation
   8:{count:4, slots:[0,1,2,3], form:'line'},         // Line Formation
   9:{count:5, slots:[0,2,6,8,12], form:'arrow'},     // Arrow Formation
   10:{count:5, slots:[1,2,7,8,13], form:'wedge'},    // Wedge Formation
   11:{count:6, slots:[0,5,6,11,12,17]},              // Scatter Formation
   12:{count:6, slots:[0,2,7,12,14,17], form:'vshape', boss:true},
-  // 阶段4: Nascent Soul（5小关）
+  // 阶段4: 元婴期（5小关）
   13:{count:5, slots:[0,2,4,6,8], form:'wedge'},
   14:{count:6, slots:[0,1,6,7,12,13]},
   15:{count:6, slots:[0,3,6,9,13,16], form:'circle'},
   16:{count:7, slots:[0,1,2,7,8,12,13], form:'arrow'},
   17:{count:7, slots:[0,3,6,7,8,12,15], form:'vshape', boss:true},
-  // 阶段5: Divine Form（6小关）
+  // 阶段5: 化神期（6小关）
   18:{count:6, slots:[0,2,4,6,8,10], form:'line'},
   19:{count:6, slots:[1,2,3,7,8,9], form:'wedge'},
   20:{count:7, slots:[0,1,6,7,12,13,14]},
   21:{count:7, slots:[0,2,5,6,8,11,12], form:'scatter'},
   22:{count:8, slots:[0,1,2,6,7,8,12,13], form:'circle'},
   23:{count:8, slots:[0,2,5,7,8,12,14,17], form:'vshape', boss:true},
-  // 阶段6-12类似设计，这里省略详细布局，使用随机+阵型倾向
+  // 阶段6-12类似设计，这里省略详细布局，使用随机+Formation倾向
 };
 
-// 获取某rounds的Enemy配置
+// 获取某轮的敌方配置
 function getBattleConfig(round){
   var cfg=BATTLE_FORMATIONS[round];
   if(cfg)return cfg;
-  // 未手动配置的rounds次自动生成
+  // 未手动配置的轮次自动生成
   var stage=getStage(round);
   var subRound=round-stage.startRound;
   var totalSub=stage.rounds;
@@ -1085,8 +1085,8 @@ function canPickArtifact(){
   return isBossRound(G.round) && G.round !== G.artifactPickRound;
 }
 function showArtifactPick(){
-  if(G.artifacts.length >= 5) return; // 最多5
-  // 随机选3未拥有的
+  if(G.artifacts.length >= 5) return; // 最多5件
+  // 随机选3件未拥有的
   const owned=new Set(G.artifacts.map(a=>a.id));
   const pool=ARTIFACTS.filter(a=>!owned.has(a.id));
   if(pool.length===0) return;
@@ -1105,7 +1105,7 @@ function showArtifactPick(){
       G.artifactPickRound=G.round;
       document.getElementById('artifactOverlay').style.display='none';
       document.getElementById('artifactCount').textContent=G.artifacts.length;
-      addBL(`🏺 +Artifacts: ${a.icon}${a.name}`,'info');SFX.artifact();
+      addBL(`🏺 获得神器: ${a.icon}${a.name}`,'info');SFX.artifact();
       renderAll();
     };
     container.appendChild(card);
@@ -1154,16 +1154,16 @@ function refreshShop(){
   G.gold-=refreshCost;rollShop();renderAll();
 }
 
-// ---- Synergies ----
+// ---- 羁绊 ----
 function calcSynergies(units){
   const cnt={};
   for(const u of units){if(!u)continue;for(const f of u.factions)cnt[f]=(cnt[f]||0)+1;}
   const r={};
-  const th={Swordsman:[2,4,6],Body Cult:[2,4,6],Rogue:[2,4,6],Rune Master:[2,3,5],Alchemist:[2,3,5],Array Master:[2,3,5],Demon Cult:[2,4,6],Beast Cult:[2,4,6],Ghost Cult:[2,3,5],Buddha Sect:[2,3,5]};
+  const th={剑修:[2,4,6],体修:[2,4,6],散修:[2,4,6],符修:[2,3,5],丹修:[2,3,5],阵修:[2,3,5],魔修:[2,4,6],妖修:[2,4,6],鬼修:[2,3,5],佛门:[2,3,5]};
   for(const[f,c]of Object.entries(cnt)){let t=0;const ts=th[f]||[2,3,5];
     for(let i=ts.length-1;i>=0;i--){if(c>=ts[i]){t=i+1;break;}}
     if(t>0)r[f]={count:c,tier:t};}
-  // 种族Synergies
+  // 种族羁绊
   for(const cs of CROSS_SYNS){
     if(cs.facs.every(f=>cnt[f]&&cnt[f]>=(cs.need||2))){
       r[cs.id]={count:1,tier:1,cross:true,name:cs.name,icon:cs.icon,desc:cs.desc};
@@ -1176,7 +1176,7 @@ function calcSynergies(units){
 function startBattle(){
   if(animating)return;
   const active=G.board.filter(u=>u!==null);
-  if(active.length===0){alert('至少放一修士上阵！');return;}
+  if(active.length===0){alert('至少放一个修士上阵！');return;}
   animating=true;
   battleRound=0;
   document.getElementById('battleLog').innerHTML='';
@@ -1194,21 +1194,21 @@ function startBattle(){
   const myU=G.board.map(u=>u?JSON.parse(JSON.stringify(u)):null);
   const enU=G.enemyBoard.map(u=>u?JSON.parse(JSON.stringify(u)):null);
   
-  // 检测并应用阵型
+  // 检测并应用Formation
   const myForm=detectFormation(G.board);
   const enForm=detectFormation(G.enemyBoard);
   applyFormation(myU,myForm,false);
   applyFormation(enU,enForm,true);
-  if(myForm)addBL('⚡ Our阵型: '+myForm.icon+myForm.name,'info');
-  if(enForm)addBL('👹 Enemy阵型: '+enForm.icon+enForm.name,'info');
+  if(myForm)addBL('⚡ 我方Formation: '+myForm.icon+myForm.name,'info');
+  if(enForm)addBL('👹 敌方Formation: '+enForm.icon+enForm.name,'info');
   
-  // Level加成
+  // 等级加成
   const lvBonus=getLevelBonus();
   for(const u of myU)if(u){u.hp=Math.floor(u.hp*lvBonus);u.atk=Math.floor(u.atk*lvBonus);u.maxHp=u.hp;}
   for(const u of myU)if(u){u.maxHp=u.hp;u.shield=0;}
-  // Artifacts加成（shield=0之后，保证ArtifactsShield生效）
+  // 神器加成（shield=0之后，保证神器护盾生效）
   applyArtifacts(myU);
-  // Artifacts可能改了hp，更新maxHp
+  // 神器可能改了hp，更新maxHp
   for(const u of myU)if(u)u.maxHp=u.hp;
   for(const u of enU)if(u){u.maxHp=u.hp;u.shield=0;}
 
@@ -1217,8 +1217,8 @@ function startBattle(){
   applySyn(myU,mySyn);
   applySyn(enU,enSyn);
 
-  if(mySyn['Array Master']&&mySyn['Array Master'].tier>=1)for(const u of myU)if(u)u.shield=(u.shield||0)+Math.floor(u.hp*0.2);
-  if(enSyn['Array Master']&&enSyn['Array Master'].tier>=1)for(const u of enU)if(u)u.shield=(u.shield||0)+Math.floor(u.hp*0.2);
+  if(mySyn['阵修']&&mySyn['阵修'].tier>=1)for(const u of myU)if(u)u.shield=(u.shield||0)+Math.floor(u.hp*0.2);
+  if(enSyn['阵修']&&enSyn['阵修'].tier>=1)for(const u of enU)if(u)u.shield=(u.shield||0)+Math.floor(u.hp*0.2);
 
   addBL('⚔️ 斗法开始！','info');
   // 切换战斗背景
@@ -1249,7 +1249,7 @@ function generateEnemyBoard(){
     const cs=UNITS.filter(u=>u.cost===cost);
     if(cs.length){
       const u={...cs[rand(cs.length)],uid:'enemy_'+i+'_'+Date.now()+'_'+rand(9999),star:1};
-      // Star
+      // 星级
       if(stage.enemyStar>=1&&Math.random()<0.3){u.star=2;u.hp=Math.floor(u.hp*1.5);u.atk=Math.floor(u.atk*1.5);u.def=Math.floor((u.def||0)*1.3);}
       if(stage.enemyStar>=2&&Math.random()<0.2){u.star=3;u.hp=Math.floor(u.hp*2.2);u.atk=Math.floor(u.atk*2.2);u.def=Math.floor((u.def||0)*2.0);}
       if(stage.enemyStar>=3){u.star=3;u.hp=Math.floor(u.hp*2.5);u.atk=Math.floor(u.atk*2.5);u.def=Math.floor((u.def||0)*2.5);}
@@ -1263,21 +1263,21 @@ function generateEnemyBoard(){
   
   // BOSS
   if(bossInfo){
-    const boss={uid:'boss_'+G.round,star:3,range:'Melee',factions:['Beast Cult'],
+    const boss={uid:'boss_'+G.round,star:3,range:'近战',factions:['妖修'],
       name:bossInfo.name,icon:bossInfo.icon,cost:5,
       hp:stage.bossHp,atk:stage.bossAtk,def:stage.bossDef,desc:stage.desc};
     pool.push(boss);
     bossAdded=true;
   }
   
-  // 按照配置的阵型放置
+  // 按照配置的Formation放置
   function shuffle(a){for(let i=a.length-1;i>0;i--){const j=rand(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
-  const melee=shuffle(pool.filter(u=>u.range==='Melee'));
-  const ranged=shuffle(pool.filter(u=>u.range!=='Melee'));
+  const melee=shuffle(pool.filter(u=>u.range==='近战'));
+  const ranged=shuffle(pool.filter(u=>u.range!=='近战'));
   const all=[...melee,...ranged];
   
   if(cfg.slots){
-    // 固定阵型
+    // 固定Formation
     for(let i=0;i<Math.min(all.length,cfg.slots.length);i++){
       G.enemyBoard[cfg.slots[i]]=all[i];
     }
@@ -1297,7 +1297,7 @@ function generateEnemyBoard(){
     for(let i=0;i<Math.min(rest.length,6);i++)G.enemyBoard[extra[i]]=rest[i];
   }
   
-  // 记录Enemy阵型用于战斗显示
+  // 记录敌方Formation用于战斗显示
   G.enemyFormation=cfg.form||null;
   return bossAdded;
 }
@@ -1305,99 +1305,99 @@ function generateEnemyBoard(){
 function applySyn(units,syn){
   for(const[f,info]of Object.entries(syn))for(const u of units){
     if(!u||!u.factions.includes(f))continue;
-    if(f==='Swordsman'){
+    if(f==='剑修'){
       const m=info.tier>=3?2.0:(info.tier>=2?1.6:1.3);
       u.atk=Math.floor(u.atk*m);
-      if(info.tier>=3)u.armorPen=0.2; // None视20%DEF
+      if(info.tier>=3)u.armorPen=0.2; // 无视20%防御
     }
-    if(f==='Body Cult'){
+    if(f==='体修'){
       const m=info.tier>=3?2.0:(info.tier>=2?1.6:1.3);
       u.hp=Math.floor(u.hp*m);u.maxHp=u.hp;
       if(info.tier>=3)u.thorns=0.15; // 反弹15%
     }
-    if(f==='Rogue'){
+    if(f==='散修'){
       u.critRate=info.tier>=3?0.6:(info.tier>=2?0.4:0.2);
       u.critMult=info.tier>=2?2.5:2.0;
       if(info.tier>=3)u.critHeal=0.2;
     }
-    if(f==='Rune Master'){
+    if(f==='符修'){
       u.bonusDmg=info.tier>=2?0.3:0;
       if(info.tier>=2)u.burnPct=0.05;
       if(info.tier>=3)u.ignoreDef=true;
     }
-    // Alchemist/Array Master/Demon Cult/Beast Cult的被动在战斗循环中处理
-    if(f==='Beast Cult'){
+    // 丹修/阵修/魔修/妖修的被动在战斗循环中处理
+    if(f==='妖修'){
       u.spdMult=info.tier>=3?1.75:(info.tier>=2?1.5:1.25);
       if(info.tier>=2)u.dodge=0.15;
     }
   }
-  // 种族Synergies
-  if(syn['iron_wall'])for(const u of units)if(u&&(u.factions.includes('Swordsman')||u.factions.includes('Body Cult'))){u.atk=Math.floor(u.atk*1.15);u.thorns=(u.thorns||0)+0.1;}
-  if(syn['spell_array'])for(const u of units)if(u&&(u.factions.includes('Rune Master')||u.factions.includes('Array Master'))){u.shield=(u.shield||0)+Math.floor(u.maxHp*0.15);}
-  if(syn['fairy_edge'])for(const u of units)if(u&&(u.factions.includes('Alchemist')||u.factions.includes('Rogue'))){u.critRate=(u.critRate||0)+0.1;}
-  if(syn['demon_beast'])for(const u of units)if(u&&(u.factions.includes('Demon Cult')||u.factions.includes('Beast Cult'))){u.lifesteal=(u.lifesteal||0)+0.15;u.spdMult=(u.spdMult||1)+0.15;}
-  if(syn['sword_rune'])for(const u of units)if(u&&(u.factions.includes('Swordsman')||u.factions.includes('Rune Master'))){u.armorPen=(u.armorPen||0)+0.2;}
-  if(syn['body_alch'])for(const u of units)if(u&&(u.factions.includes('Body Cult')||u.factions.includes('Alchemist'))){u.regen=(u.regen||0)+0.1;}
-  if(syn['ghost_buddha'])for(const u of units)if(u&&(u.factions.includes('Ghost Cult')||u.factions.includes('Buddha Sect'))){u.soulReap=(u.soulReap||0)+0.2;}
-  if(syn['sword_ghost'])for(const u of units)if(u&&(u.factions.includes('Swordsman')||u.factions.includes('Ghost Cult'))){u.lifesteal=(u.lifesteal||0)+0.1;}
-  if(syn['buddha_body'])for(const u of units)if(u&&(u.factions.includes('Buddha Sect')||u.factions.includes('Body Cult'))){u.shield=(u.shield||0)+Math.floor(u.maxHp*0.2);}
-  // Ghost Cult和Buddha SectSynergies
-  if(syn['Ghost Cult'])for(const u of units)if(u&&u.factions.includes('Ghost Cult')){const m=syn['Ghost Cult'].tier>=3?1.6:(syn['Ghost Cult'].tier>=2?1.4:1.2);u.atk=Math.floor(u.atk*m);}
-  if(syn['Buddha Sect'])for(const u of units)if(u&&u.factions.includes('Buddha Sect')){const m=syn['Buddha Sect'].tier>=3?1.6:(syn['Buddha Sect'].tier>=2?1.4:1.2);u.maxHp=u.hp=Math.floor(u.hp*m);u.shield=(u.shield||0)+Math.floor(u.hp*0.1*syn['Buddha Sect'].tier);}
+  // 种族羁绊
+  if(syn['iron_wall'])for(const u of units)if(u&&(u.factions.includes('剑修')||u.factions.includes('体修'))){u.atk=Math.floor(u.atk*1.15);u.thorns=(u.thorns||0)+0.1;}
+  if(syn['spell_array'])for(const u of units)if(u&&(u.factions.includes('符修')||u.factions.includes('阵修'))){u.shield=(u.shield||0)+Math.floor(u.maxHp*0.15);}
+  if(syn['fairy_edge'])for(const u of units)if(u&&(u.factions.includes('丹修')||u.factions.includes('散修'))){u.critRate=(u.critRate||0)+0.1;}
+  if(syn['demon_beast'])for(const u of units)if(u&&(u.factions.includes('魔修')||u.factions.includes('妖修'))){u.lifesteal=(u.lifesteal||0)+0.15;u.spdMult=(u.spdMult||1)+0.15;}
+  if(syn['sword_rune'])for(const u of units)if(u&&(u.factions.includes('剑修')||u.factions.includes('符修'))){u.armorPen=(u.armorPen||0)+0.2;}
+  if(syn['body_alch'])for(const u of units)if(u&&(u.factions.includes('体修')||u.factions.includes('丹修'))){u.regen=(u.regen||0)+0.1;}
+  if(syn['ghost_buddha'])for(const u of units)if(u&&(u.factions.includes('鬼修')||u.factions.includes('佛门'))){u.soulReap=(u.soulReap||0)+0.2;}
+  if(syn['sword_ghost'])for(const u of units)if(u&&(u.factions.includes('剑修')||u.factions.includes('鬼修'))){u.lifesteal=(u.lifesteal||0)+0.1;}
+  if(syn['buddha_body'])for(const u of units)if(u&&(u.factions.includes('佛门')||u.factions.includes('体修'))){u.shield=(u.shield||0)+Math.floor(u.maxHp*0.2);}
+  // 鬼修和佛门羁绊
+  if(syn['鬼修'])for(const u of units)if(u&&u.factions.includes('鬼修')){const m=syn['鬼修'].tier>=3?1.6:(syn['鬼修'].tier>=2?1.4:1.2);u.atk=Math.floor(u.atk*m);}
+  if(syn['佛门'])for(const u of units)if(u&&u.factions.includes('佛门')){const m=syn['佛门'].tier>=3?1.6:(syn['佛门'].tier>=2?1.4:1.2);u.maxHp=u.hp=Math.floor(u.hp*m);u.shield=(u.shield||0)+Math.floor(u.hp*0.1*syn['佛门'].tier);}
 }
 
 function battleStep(myU,enU,mySyn,enSyn,rounds){
   if(rounds>=30&&G.gameMode!=='endless'){endBattle(0);return;}
-  // None尽模式敌人每Round回复少量HP防止None限拖
+  // 无尽模式敌人每回合回复少量生命防止无限拖
   if(G.gameMode==='endless'&&rounds%5===0){for(const u of enU)if(u&&u.hp>0)u.hp=Math.min(u.hp+Math.floor(u.maxHp*0.1),u.maxHp);}
   battleRound=rounds+1;
-  document.getElementById('battleRoundDisplay').textContent=`Round ${battleRound}`;
+  document.getElementById('battleRoundDisplay').textContent=`回合 ${battleRound}`;
 
-  // Artifacts：None限法球
-  for(const u of myU)if(u&&u.infinity&&u.hp>0){const bonus=Math.floor(u.atk*0.05);u.atk+=bonus;addBL(`♾️[Artifacts]${u.name}ATK+${bonus}`,'info');}
+  // 神器：无限法球
+  for(const u of myU)if(u&&u.infinity&&u.hp>0){const bonus=Math.floor(u.atk*0.05);u.atk+=bonus;addBL(`♾️[神器]${u.name}攻击+${bonus}`,'info');}
 
-  // Artifacts：生机之泉
-  for(const u of myU)if(u&&u.regen&&u.hp>0){const h=Math.floor(u.maxHp*u.regen);u.hp=Math.min(u.hp+h,u.maxHp);addBL(`🌿[Artifacts]${u.name}Regen${h}`,'heal');}
+  // 神器：生机之泉
+  for(const u of myU)if(u&&u.regen&&u.hp>0){const h=Math.floor(u.maxHp*u.regen);u.hp=Math.min(u.hp+h,u.maxHp);addBL(`🌿[神器]${u.name}回血${h}`,'heal');}
 
-  // AlchemistRegen
-  if(mySyn['Alchemist']&&mySyn['Alchemist'].tier>=1)for(const u of myU)if(u&&u.hp>0){u.hp=Math.min(u.hp+Math.floor(u.maxHp*0.15),u.maxHp);addBL('💊 AlchemistRegenOur','heal');}
-  if(enSyn['Alchemist']&&enSyn['Alchemist'].tier>=1)for(const u of enU)if(u&&u.hp>0){u.hp=Math.min(u.hp+Math.floor(u.maxHp*0.15),u.maxHp);}
+  // 丹修回血
+  if(mySyn['丹修']&&mySyn['丹修'].tier>=1)for(const u of myU)if(u&&u.hp>0){u.hp=Math.min(u.hp+Math.floor(u.maxHp*0.15),u.maxHp);addBL('💊 丹修回血我方','heal');}
+  if(enSyn['丹修']&&enSyn['丹修'].tier>=1)for(const u of enU)if(u&&u.hp>0){u.hp=Math.min(u.hp+Math.floor(u.maxHp*0.15),u.maxHp);}
 
   const myAlive=myU.filter(u=>u&&u.hp>0);
   const enAlive=enU.filter(u=>u&&u.hp>0);
   if(myAlive.length===0||enAlive.length===0){endBattle(myAlive.length>0?1:-1);return;}
 
-  // 计算本RoundATK（含前后排系统）
+  // 计算本回合攻击（含前后排系统）
   const attacks=[];
 
-  // 找有效目标：Melee只能打前排，前排死光才能打后排；Ranged随便打
+  // 找有效目标：近战只能打前排，前排死光才能打后排；远程随便打
   function findTarget(attacker, targets, isEnemyTargets){
-    // targets: Enemy单位的数组（含位置信息）
-    // 前排：Enemy row3=索引0-5, Our row2=索引12-17
+    // targets: 敌方单位的数组（含位置信息）
+    // 前排：敌方 row3=索引0-5, 我方 row2=索引12-17
     const frontIdx=isEnemyTargets?[0,1,2,3,4,5]:[12,13,14,15,16,17];
-    const isMelee=attacker.range==='Melee';
+    const isMelee=attacker.range==='近战';
     // 找前排活着的
     const frontAlive=frontIdx.map(i=>targets[i]).filter(u=>u&&u.hp>0);
     if(frontAlive.length>0)return frontAlive[0];
     if(isMelee){
-      // Melee前排死光了才能打后排
+      // 近战前排死光了才能打后排
       const allAlive=targets.filter(u=>u&&u.hp>0);
       return allAlive.length>0?allAlive[0]:null;
     }
-    // Ranged随便打
+    // 远程随便打
     const allAlive=targets.filter(u=>u&&u.hp>0);
     return allAlive.length>0?allAlive[0]:null;
   }
 
   function calcAttackDmg(a, t, syn, isMySide){
     let dmg=Math.max(1, a.atk+rand(5));
-    // DEF减伤（有None视DEF的话）
+    // 防御减伤（有无视防御的话）
     const defVal=a.ignoreDef?0:(t.def||0);
     dmg=Math.max(1, dmg-defVal);
-    // 护甲Pierce（Swordsman3级）
+    // 护甲穿透（剑修3级）
     if(a.armorPen)dmg=dmg+Math.floor((t.def||0)*a.armorPen);
 
-    // Counter系统
+    // 克制系统
     let counterBonus=1;
     for(const af of a.factions){
       const countered=COUNTERS[af];
@@ -1408,34 +1408,34 @@ function battleStep(myU,enU,mySyn,enSyn,rounds){
     }
     dmg=Math.floor(dmg*counterBonus);
 
-    // Rune Master燃烧
+    // 符修燃烧
     let burnDmg=0;
     if(a.burnPct&&t.maxHp){burnDmg=Math.floor(t.maxHp*a.burnPct);dmg+=burnDmg;}
 
-    // Crit
+    // 暴击
     let isCrit=false;
-    const critRate=a.critRate||(isMySide&&syn?((syn['Rogue']&&syn['Rogue'].tier>=2?0.4:syn['Rogue']?0.2:0)):(isMySide===false&&syn?((syn['Rogue']&&syn['Rogue'].tier>=2?0.4:syn['Rogue']?0.2:0)):0));
+    const critRate=a.critRate||(isMySide&&syn?((syn['散修']&&syn['散修'].tier>=2?0.4:syn['散修']?0.2:0)):(isMySide===false&&syn?((syn['散修']&&syn['散修'].tier>=2?0.4:syn['散修']?0.2:0)):0));
     const critMult=a.critMult||2.0;
     if(Math.random()<critRate){dmg=Math.floor(dmg*critMult);isCrit=true;}
 
-    // Dodge
+    // 闪避
     if(t.dodge&&Math.random()<t.dodge){dmg=0;}
 
-    // Artifacts：斩龙刃(Execute) - None视Shield
+    // 神器：斩龙刃(斩杀) - 无视护盾
     let executeKill=false;
     if(a.execute&&t.hp/t.maxHp<0.3&&t.hp>0&&dmg>0){dmg=t.hp;executeKill=true;}
 
-    // Artifacts：寒冰领域(减速)
+    // 神器：寒冰领域(减速)
     if(a.slowOnHit&&dmg>0){dmg=Math.floor(dmg*1.35);} // 寒冰领域+35%伤害
 
-    // Thorns
+    // 反伤
     let thornsDmg=0;
     if(t.thorns&&dmg>0)thornsDmg=Math.floor(dmg*t.thorns);
 
-    // Lifesteal
+    // 吸血
     let lifesteal=0;
-    if(a.lifesteal||(isMySide&&syn&&syn['Demon Cult'])){
-      const ls=a.lifesteal||(syn&&syn['Demon Cult']?(syn['Demon Cult'].tier>=2?0.4:0.25):0);
+    if(a.lifesteal||(isMySide&&syn&&syn['魔修'])){
+      const ls=a.lifesteal||(syn&&syn['魔修']?(syn['魔修'].tier>=2?0.4:0.25):0);
       lifesteal=Math.floor(dmg*ls);
       a.hp=Math.min(a.hp+lifesteal, a.maxHp);
     }
@@ -1443,12 +1443,12 @@ function battleStep(myU,enU,mySyn,enSyn,rounds){
     let ad=dmg;
     if(!executeKill&&t.shield>0){if(t.shield>=dmg){t.shield-=dmg;ad=0;}else{ad=dmg-t.shield;t.shield=0;}}
 
-    // 新ArtifactsEffect
+    // 新神器效果
     if(a.bloodMagic&&dmg>0){const missing=1-a.hp/a.maxHp;a.lifesteal=(a.lifesteal||0)+missing*0.3;}
     if(a.thunderStrike&&Math.random()<a.thunderStrike&&dmg>0){dmg=Math.floor(dmg*1.5);}
     if(a.ironWill&&battleRound<=3&&dmg>0)dmg=Math.floor(dmg*0.5); // 护心镜减伤(对自身)
     if(a.firstStrike&&battleRound<=1&&dmg>0)dmg=Math.floor(dmg*1.3);
-    if(a.demonSlayer&&t.factions&&t.factions.includes('Demon Cult')){dmg=Math.floor(dmg*2.0);}
+    if(a.demonSlayer&&t.factions&&t.factions.includes('魔修')){dmg=Math.floor(dmg*2.0);}
     if(a.precision){a.precision.count=(a.precision.count||0)+1;if(a.precision.count>=3){dmg=Math.floor(dmg*3.0);a.precision.count=0;}}
     if(a.undying&&t.hp/t.maxHp<0.3&&dmg>0)dmg=Math.floor(dmg*0.5);
     const precisionProc=a.precision&&a.precision.count===0;
@@ -1461,18 +1461,18 @@ function battleStep(myU,enU,mySyn,enSyn,rounds){
     const t=findTarget(a, enU, true);
     if(!t)continue;
     const result=calcAttackDmg(a,t,mySyn,true);
-    // Thorns
+    // 反伤
     if(result.thorns>0&&t.hp>0){
       t.hp-=result.thorns;
       attacks.push({a:t,t:a,dmg:result.thorns,crit:false,side:'en',heal:0,type:'thorns'});
     }
     attacks.push({a,t,...result,side:'my',heal:result.lifesteal||0});
-    // Range伤害
+    // 范围伤害
     if(a.aoe&&t.hp>0){const targets=enU.filter(u=>u&&u.hp>0&&u!==t);let hit=0;
       for(const at of targets){if(hit>=a.aoe)break;const r=calcAttackDmg(a,at,mySyn,true);
         if(r.thorns>0&&at.hp>0){at.hp-=r.thorns;attacks.push({a:at,t:a,dmg:r.thorns,crit:false,side:'en',heal:0,type:'thorns'});}
         attacks.push({a,t:at,...r,side:'my',heal:r.lifesteal||0});hit++;}
-      addBL(`🌊 ${a.name} RangeATK${hit}人!`,'hit');}
+      addBL(`🌊 ${a.name} 范围攻击${hit}人!`,'hit');}
     // 连击符印
     if(a.doubleStrike&&Math.random()<a.doubleStrike&&t.hp>0){
       const r2=calcAttackDmg(a,t,mySyn,true);
@@ -1498,7 +1498,7 @@ function battleStep(myU,enU,mySyn,enSyn,rounds){
         attacks.push({a,t:at,...r,side:'en',heal:r.lifesteal||0});hit++;}}
   }
 
-  // Speed加成: 额外ATK
+  // 攻速加成: 额外攻击
   for(const side of[{units:myU,syn:mySyn,isMy:true,targets:enU},{units:enU,syn:enSyn,isMy:false,targets:myU}]){
     for(const a of side.units){
       if(!a||a.hp<=0)continue;
@@ -1523,50 +1523,50 @@ function battleStep(myU,enU,mySyn,enSyn,rounds){
   renderBattleBoard(myU,enU,[],[]);
 
   // 发射弹道
-  // 过滤掉Thorns（None弹道）
+  // 过滤掉反伤（无弹道）
   const normal=attacks.filter(at=>at.type!=='thorns');
   fireAllProjectiles(normal, ()=>{
     // 弹道到达 → 施加伤害
     const anims=[];
     const killed=[];
-    // 先处理Thorns（None弹道）
+    // 先处理反伤（无弹道）
     const normalAtks=attacks.filter(at=>at.type!=='thorns');
     const thornsAtks=attacks.filter(at=>at.type==='thorns');
     for(const at of thornsAtks){
       at.t.hp-=at.dmg;
       if(at.t.hp<=0){at.t.hp=0;killed.push(at.t);}
-      addBL(`🛡️ Thorns ${at.dmg}`,'hit');
+      addBL(`🛡️ 反伤 ${at.dmg}`,'hit');
     }
     for(const at of normalAtks){
       if(at.isDodge){
-        addBL(`💨 ${at.t.name} Dodge!`,'info');
+        addBL(`💨 ${at.t.name} 闪避!`,'info');
         continue;
       }
       at.t.hp-=at.dmg;
       let log=`${at.side==='my'?'🗡️':'👹'} ${at.a.name}`;
-      if(at.counter)log+=` [Counter]`;
+      if(at.counter)log+=` [克制]`;
       if(at.frost)log+=` ❄️减速`;
-      if(at.execute)log+=` 💀Execute`;
+      if(at.execute)log+=` 💀斩杀`;
       if(at.precision)log+=` 🎯3倍`;
-      log+=` → ${at.t.name} ${at.dmg}${at.crit?' 💥Crit!':''}`;
+      log+=` → ${at.t.name} ${at.dmg}${at.crit?' 💥暴击!':''}`;
       if(at.crit){SFX.crit();document.getElementById('gameBoard').classList.add('crit-flash');setTimeout(()=>document.getElementById('gameBoard').classList.remove('crit-flash'),400);}else SFX.attack();
       if(at.burn)log+=` 🔥+${at.burn}`;
       anims.push({type:'atk',ai:at.a,ti:at.t,dmg:at.dmg,crit:at.crit,side:at.side});
       addBL(log,'hit');
       if(at.t.hp<=0){
         at.t.hp=0;anims.push({type:'kill',ti:at.t});killed.push(at.t);
-        // Artifacts：噬魂法杖
-        if(at.a.soulReap){const h=Math.floor(at.a.maxHp*at.a.soulReap);at.a.hp=Math.min(at.a.hp+h,at.a.maxHp);addBL(`🔮 噬魂 +${h}HP`,'heal');}
-        // Artifacts：狂暴之心
-        if(at.a.rage){at.a.atk=Math.floor(at.a.atk*1.03);addBL(`🔥 狂暴 ATK+3%`,'info');}
+        // 神器：噬魂法杖
+        if(at.a.soulReap){const h=Math.floor(at.a.maxHp*at.a.soulReap);at.a.hp=Math.min(at.a.hp+h,at.a.maxHp);addBL(`🔮 噬魂 +${h}生命`,'heal');}
+        // 神器：狂暴之心
+        if(at.a.rage){at.a.atk=Math.floor(at.a.atk*1.03);addBL(`🔥 狂暴 攻击+3%`,'info');}
         addBL(`💀 ${at.t.name} 被击杀!`,'kill');SFX.kill();
       }
-      // Artifacts：天神护体
+      // 神器：天神护体
       if(at.t.divineShield&&at.t.hp<=0){at.t.hp=Math.floor(at.t.maxHp*0.3);at.t.divineShield=false;addBL(`👼 ${at.t.name} 天神护体!`,'heal');anims.push({type:'heal',ti:at.t,val:Math.floor(at.t.maxHp*0.3)});}
       if(at.heal>0)anims.push({type:'heal',ti:at.a,val:at.heal});
     }
 
-    // 渲染带伤害数字和Dead动画
+    // 渲染带伤害数字和死亡动画
     renderBattleBoard(myU,enU,anims,killed);
 
     const ma=myU.filter(u=>u&&u.hp>0);
@@ -1648,7 +1648,7 @@ function renderBattleBoard(myU,enU,anims,killed){
       const div=document.createElement('div');
       div.className='unit';
       const animCls=unit.star>=3?'glow-3':unit.cost>=5?'glow-2':unit.cost>=3?'glow-1':'idle';div.classList.add(animCls);
-      if(unit.range==='Ranged')div.classList.add('ranged');else div.classList.add('melee');
+      if(unit.range==='远程')div.classList.add('ranged');else div.classList.add('melee');
       if(unit.cost>=5)div.classList.add('cost-5');
       if(unit.star>=3)div.classList.add('star-3');
       div.style.background=getRC(unit.cost);
@@ -1727,20 +1727,20 @@ function endBattle(result){
       bossBonus=`<div style="color:#ffd700;font-size:16px;margin-top:4px;">👑 BOSS奖励 +${bb}🪙</div>`;
       addBL(`👑 击杀BOSS! +${bb}灵石`,'kill');G.bossKilled=(G.bossKilled||0)+1;
     }
-    content=`<h2 style="color:#69db7c;">🎉 Victory！</h2><div style="color:#aaa;margin:8px 0;">Enemy全灭</div>`;
+    content=`<h2 style="color:#69db7c;">🎉 胜利！</h2><div style="color:#aaa;margin:8px 0;">敌方全灭</div>`;
     G.streak=G.streak>0?G.streak+1:1;
     G.gold+=gw;
     content+=`<div style="color:#ffd700;font-size:18px;">🪙 +${gw}灵石</div>${bossBonus}`;
-    addBL(`🎉 Victory! +${gw}灵石`,'info');if(!G.gameOver)SFX.victory();
+    addBL(`🎉 胜利! +${gw}灵石`,'info');if(!G.gameOver)SFX.victory();
   }else if(result===-1){
     const sv=myAlive;
     const dmg=Math.max(2,10-sv);
     G.hp-=dmg;
-    content=`<h2 style="color:#ff6b6b;">💔 战败</h2><div style="color:#aaa;margin:8px 0;">剩余${sv}人 HP-${dmg}</div><div style="color:#ffa;font-size:12px;margin-top:4px;">💡 敌人不变，调整阵容再战！</div>`;
+    content=`<h2 style="color:#ff6b6b;">💔 战败</h2><div style="color:#aaa;margin:8px 0;">剩余${sv}人 生命-${dmg}</div><div style="color:#ffa;font-size:12px;margin-top:4px;">💡 敌人不变，调整阵容再战！</div>`;
     G.streak=G.streak<0?G.streak-1:-1;
     G.gold+=1;
     content+=`<div style="color:#ffd700;font-size:18px;">🪙 +1灵石</div>`;
-    addBL(`💔 战败! -${dmg}HP`,'hit');SFX.defeat();
+    addBL(`💔 战败! -${dmg}生命`,'hit');SFX.defeat();
   }else{
     G.gold+=2;
     G.enemiesDefeated = true;
@@ -1749,7 +1749,7 @@ function endBattle(result){
     addBL(`⚖️ 平局`,'info');
   }
 
-  // Artifacts：灵石宝库
+  // 神器：灵石宝库
   if(G.artifacts.some(a=>a.id==='gold_bonus')){G.gold+=3;addBL('💎 灵石宝库 +3🪙','info');}
   if(G.artifacts.some(a=>a.id==='mana_gem')){G.gold+=2;addBL('💠 聚灵阵 +2🪙','info');}
 
@@ -1757,8 +1757,8 @@ function endBattle(result){
   G.gold+=int;
   if(int>0)content+=`<div style="color:#888;font-size:13px;">💎 利息 +${int}</div>`;
 
-  // Streak/Losing显示
-  const streakText=G.streak>1?`<div style="color:#ff6b35;font-size:13px;margin-top:4px;">🔥 ${G.streak}Streak Bonus已计入</div>`:G.streak<-1?`<div style="color:#74c0fc;font-size:13px;margin-top:4px;">💧 ${-G.streak}Losing 下次Victory额外+${Math.min(-G.streak,3)}`:'',streakTextShown=G.streak>1||G.streak<-1;
+  // 连胜/连败显示
+  const streakText=G.streak>1?`<div style="color:#ff6b35;font-size:13px;margin-top:4px;">🔥 ${G.streak}连胜 额外奖励已计入</div>`:G.streak<-1?`<div style="color:#74c0fc;font-size:13px;margin-top:4px;">💧 ${-G.streak}连败 下次胜利额外+${Math.min(-G.streak,3)}`:'',streakTextShown=G.streak>1||G.streak<-1;
   if(streakTextShown)content+=streakText;
 
   // 添加战斗日志摘要
@@ -1766,26 +1766,26 @@ function endBattle(result){
   const logEntries=logEl?Array.from(logEl.children).slice(-5).map(d=>d.textContent).join('<br>'):'';
   if(logEntries)content+=`<div style="margin-top:8px;padding-top:6px;border-top:1px solid rgba(255,255,255,0.08);font-size:11px;color:#888;text-align:left;max-height:80px;overflow-y:auto;">${logEntries}</div>`;
 
-  // 阶段Advanced奖励（赢了才加rounds数）
+  // 阶段突破奖励（赢了才加轮数）
   const oldStage=getStage(G.round);
   if(result===1||result===0)G.round++;
   const newStage=getStage(G.round);
   if(oldStage.id!==newStage.id&&!G.gameOver){
     const bonusGold=10+G.round;
     G.gold+=bonusGold;
-    content+=`<div style="color:${newStage.color};font-size:20px;margin-top:8px;text-shadow:0 0 10px ${newStage.color};">🎉 Congratulations!! ${oldStage.name}Completed!!</div>`;
-    content+=`<div style="color:${newStage.color};font-size:15px;">⬆️ Advanced to${newStage.name}! +${bonusGold}🪙</div>`;
-    addBL(`🎉 ${oldStage.name}Completed!! Advanced to${newStage.name}! +${bonusGold}🪙`,'info');
+    content+=`<div style="color:${newStage.color};font-size:20px;margin-top:8px;text-shadow:0 0 10px ${newStage.color};">🎉 恭喜过关! ${oldStage.name}通关!</div>`;
+    content+=`<div style="color:${newStage.color};font-size:15px;">⬆️ 突破至${newStage.name}! +${bonusGold}🪙</div>`;
+    addBL(`🎉 ${oldStage.name}通关! 突破至${newStage.name}! +${bonusGold}🪙`,'info');
     SFX.levelUp();
   }else if(isBossRound(G.round-1)&&result===1&&!G.gameOver){
-    // BOSSroundsVictory但还没切换到下一阶段（最后一关的BOSS）
-    content+=`<div style="color:#ffd700;font-size:18px;margin-top:8px;">🎉 ${newStage.name}Completed!!</div>`;
+    // BOSS轮胜利但还没切换到下一阶段（最后一关的BOSS）
+    content+=`<div style="color:#ffd700;font-size:18px;margin-top:8px;">🎉 ${newStage.name}通关!</div>`;
   }
   if(G.hp<=0){
     G.hp=0;G.gameOver=true;
-    content=`<h2 style="color:#ff4444;">💀 Fallen...</h2><div style="color:#aaa;margin:8px 0;">You survived ${G.round-1} rounds</div>`;
-    document.getElementById('battleDoneBtn').textContent='ViewReincarnate';
-    addBL(`💀 Fallen! 撑过了${G.round-1}rounds`,'kill');
+    content=`<h2 style="color:#ff4444;">💀 道陨...</h2><div style="color:#aaa;margin:8px 0;">你撑过了 ${G.round-1} 轮</div>`;
+    document.getElementById('battleDoneBtn').textContent='Reincarnate';
+    addBL(`💀 道陨! 撑过了${G.round-1}轮`,'kill');
   }else{
     document.getElementById('battleDoneBtn').textContent='Continue';
   }
@@ -1793,7 +1793,7 @@ function endBattle(result){
   document.getElementById('battleDoneBtn').style.display='inline-block';
   document.getElementById('battleResultOverlay').style.display='flex';
 
-  // 恢复Normal棋盘显示
+  // 恢复普通棋盘显示
   setTimeout(()=>{
     document.getElementById('battleBar').style.display='none';
     animating=false;
@@ -1806,10 +1806,10 @@ function afterBattle(){
   document.getElementById('battleBar').style.display='none';
   if(G.gameOver){showRebirthPanel();return;}
   G.adUsedThisRound = false;
-  // 赢了才Refresh敌人，输了保留上一rounds敌人可以重试
+  // 赢了才刷新敌人，输了保留上一轮敌人可以重试
   if(G.enemiesDefeated) generateEnemyBoard();
   SFX.bgmStart('prepare');
-  // Artifacts选择
+  // 神器选择
   if(G.enemiesDefeated && canPickArtifact()){
     setTimeout(()=>showArtifactPick(), 300);
   }
@@ -1821,7 +1821,7 @@ function watchAd(){
   G.adUsedThisRound = true;
   const bonus = 2 + rand(4); // 2-5
   G.gold += bonus;
-  addBL(`📺 看Ad+ ${bonus}🪙！`,'info');
+  addBL(`📺 看广告获得 ${bonus}🪙！`,'info');
   renderAll();
 }
 
@@ -1839,9 +1839,9 @@ function renderAll(){
   if(fl){try{var f=detectFormation(G.board);
     var cnt=G.board.filter(function(u){return u!==null}).length;
     if(f){fl.style.display='block';fl.innerHTML=f.icon+' '+f.name+' ( '+cnt+'人 )';fl.style.color='#ffd700';}
-    else{fl.style.display='block';fl.innerHTML='🚫 未成阵型 ('+cnt+'人)';fl.style.color='#666';}}catch(e){fl.innerHTML='❌';fl.style.display='block';}}
-  // 顶部Status栏阵型
-  try{var fs=document.getElementById('formationStat');if(fs){var f2=detectFormation(G.board);var c2=G.board.filter(function(u){return u!==null}).length;if(f2&&c2>=3)fs.innerHTML=f2.icon+' '+f2.name;else fs.innerHTML='🚫No Formation';}}catch(e){}
+    else{fl.style.display='block';fl.innerHTML='🚫 未成Formation ('+cnt+'人)';fl.style.color='#666';}}catch(e){fl.innerHTML='❌';fl.style.display='block';}}
+  // 顶部状态栏Formation
+  try{var fs=document.getElementById('formationStat');if(fs){var f2=detectFormation(G.board);var c2=G.board.filter(function(u){return u!==null}).length;if(f2&&c2>=3)fs.innerHTML=f2.icon+' '+f2.name;else fs.innerHTML='🚫无Formation';}}catch(e){}
 }
 
 function renderBoard(){
@@ -1856,7 +1856,7 @@ function renderBoard(){
       const u=G.board[i];
       const div=document.createElement('div');div.className='unit';div.style.background=getRC(u.cost);
       const animCls=u.star>=3?'glow-3':u.cost>=5?'glow-2':u.cost>=3?'glow-1':'idle';div.classList.add(animCls);
-      if(u.range==='Ranged')div.classList.add('ranged');else div.classList.add('melee');
+      if(u.range==='远程')div.classList.add('ranged');else div.classList.add('melee');
       if(u.cost>=5)div.classList.add('cost-5');
       if(u.star>=3)div.classList.add('star-3');
       div.innerHTML=`<div class="icon-wrap">${unitIcon(u)}</div><div class="stars">${'★'.repeat(u.star||1)}</div><div class="cost-badge">${u.cost}💎</div><div class="hp-bar"><div class="fill" style="width:100%;background:#4c4"></div></div><div class="name-tag">${u.name}</div>`;
@@ -1874,7 +1874,7 @@ function renderBoard(){
       if(G.enemyBoard[ei]){
         const u=G.enemyBoard[ei];cell.style.background='rgba(255,50,50,0.15)';
         cell.style.border='1px solid rgba(255,50,50,0.25)';
-        const es='★'.repeat(u.star||1);const er=u.range==='Ranged'?'🏹':'⚔️';
+        const es='★'.repeat(u.star||1);const er=u.range==='远程'?'🏹':'⚔️';
         const animCls=u.star>=3?'glow-3':u.cost>=5?'glow-2':u.cost>=3?'glow-1':'idle';
         const isBossUnit=u.uid&&u.uid.startsWith('boss');
         cell.innerHTML=`<div class="unit ${animCls}" style="text-align:center;padding-top:4px;background:${getRC(u.cost)};border-radius:6px;">${isBossUnit?'<div style="position:absolute;top:-2px;left:50%;transform:translateX(-50%);font-size:12px;z-index:5;">👑</div>':''}<div style="height:55%;display:flex;align-items:center;justify-content:center;">${unitIcon(u)}</div><div style="font-size:8px;color:#ffd700;line-height:1.2;">${es}${isBossUnit?'👑BOSS':''}</div><div style="font-size:9px;color:#f88;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${er}${u.name}</div></div>`;
@@ -1886,7 +1886,7 @@ function renderBoard(){
     }
     boardEl.appendChild(cell);
   }
-  // 更新阵型标签
+  // 更新Formation标签
   const formLb=document.getElementById('formationLabel');
   if(formLb){
     const form=detectFormation(G.board);
@@ -1896,7 +1896,7 @@ function renderBoard(){
       formLb.style.color='#ffd700';
     }else if(!animating){
       formLb.style.display='block';
-      formLb.innerHTML='🚫 未成阵型（上阵2人以上自动检测）';
+      formLb.innerHTML='🚫 未成Formation（上阵2人以上自动检测）';
       formLb.style.color='#666';
     }else{
       formLb.style.display='none';
@@ -1905,7 +1905,7 @@ function renderBoard(){
 }
 
 function renderShop(){
-  // 显示Level概率
+  // 显示等级概率
   const probsLabels=[{l:1,c:'100/0/0/0/0'},{l:2,c:'70/30/0/0/0'},{l:3,c:'55/30/15/0/0'},{l:4,c:'40/30/20/10/0'},{l:5,c:'30/25/25/15/5'},{l:6,c:'20/20/25/25/10'},{l:7,c:'15/15/20/30/20'},{l:8,c:'10/10/15/30/35'},{l:9,c:'5/5/10/30/50'}];
   const idx=Math.min(G.level-1,probsLabels.length-1);
   document.getElementById('shopInfo').textContent=`⭐${G.level} 概率 ${probsLabels[idx].c}`;
@@ -1932,38 +1932,38 @@ function renderSynergies(){
     tag.onmouseout=hideTooltip;
     el.appendChild(tag);
   }
-  // 种族Synergies
+  // 种族羁绊
   for(const cs of CROSS_SYNS){
     const ai=syn[cs.id];
     const tag=document.createElement('div');
     tag.className=`synergy-tag ${ai?'active-1':'inactive'}`;
     const ok=cs.facs.every(f=>active.some(u=>u&&u.factions.includes(f)));
     tag.textContent=`${cs.icon}${cs.name}`;
-    if(ok)tag.title='已激活: '+cs.desc;else tag.title='需要各'+((cs.need||2)+': ')+cs.facs.join('+');
+    if(ok)tag.title='已激活: '+cs.desc;else tag.title='需要各'+((cs.need||2)+'个: ')+cs.facs.join('+');
     const needCnt=cs.need||2;
-    tag.onmouseover=e=>showTooltip(e,`<div class="tt-name">${cs.icon} ${cs.name}</div><div style="color:#888;font-size:11px;">${cs.desc}</div><div style="margin-top:4px;border-top:1px solid rgba(255,255,255,0.08);padding-top:4px;color:${ok?'#8f8':'#666'};font-size:11px;">${ok?'✅ 已激活':'❌ 需各'+needCnt+''}</div>`);
+    tag.onmouseover=e=>showTooltip(e,`<div class="tt-name">${cs.icon} ${cs.name}</div><div style="color:#888;font-size:11px;">${cs.desc}</div><div style="margin-top:4px;border-top:1px solid rgba(255,255,255,0.08);padding-top:4px;color:${ok?'#8f8':'#666'};font-size:11px;">${ok?'✅ 已激活':'❌ 需各'+needCnt+'个'}</div>`);
     tag.onmouseout=hideTooltip;
     el.appendChild(tag);
   }
-  // 阵型信息
+  // Formation信息
   const form=detectFormation(G.board);
   const formTag=document.createElement('div');
   formTag.className=`synergy-tag ${form?'active-1':'inactive'}`;
-  formTag.textContent=form?`${form.icon}${form.name}`:'🚫 No Formation';
+  formTag.textContent=form?`${form.icon}${form.name}`:'🚫 无Formation';
   if(form){
     const fb=form.bonus;
     const parts=[];
-    if(fb.atkMult)parts.push(`ATK+${Math.round((fb.atkMult-1)*100)}%`);
-    if(fb.hpMult)parts.push(`HP+${Math.round((fb.hpMult-1)*100)}%`);
-    if(fb.critRate)parts.push(`Crit+${Math.round(fb.critRate*100)}%`);
-    if(fb.spdMult)parts.push(`Speed+${Math.round(fb.spdMult*100)}%`);
-    if(fb.armorPen)parts.push(`Pierce+${Math.round(fb.armorPen*100)}%`);
-    if(fb.dodge)parts.push(`Dodge+${Math.round(fb.dodge*100)}%`);
+    if(fb.atkMult)parts.push(`攻击+${Math.round((fb.atkMult-1)*100)}%`);
+    if(fb.hpMult)parts.push(`生命+${Math.round((fb.hpMult-1)*100)}%`);
+    if(fb.critRate)parts.push(`暴击+${Math.round(fb.critRate*100)}%`);
+    if(fb.spdMult)parts.push(`攻速+${Math.round(fb.spdMult*100)}%`);
+    if(fb.armorPen)parts.push(`穿透+${Math.round(fb.armorPen*100)}%`);
+    if(fb.dodge)parts.push(`闪避+${Math.round(fb.dodge*100)}%`);
     formTag.title=form.desc+'\n'+parts.join(' ');
     formTag.onmouseover=e=>showTooltip(e,`<div class="tt-name">${form.icon} ${form.name}</div><div style="color:#aaa;font-size:11px;">${form.desc}</div><div style="margin-top:4px;border-top:1px solid rgba(255,255,255,0.08);padding-top:4px;color:#ffd700;font-size:11px;">${parts.join('<br>')}</div>`);
     formTag.onmouseout=hideTooltip;
   }else{
-    formTag.title='摆放特定阵型可+额外加成';
+    formTag.title='摆放特定Formation可获得额外加成';
     formTag.style.cursor='default';
   }
   el.appendChild(formTag);
@@ -1974,7 +1974,7 @@ function renderSynergies(){
   stgTag.style.borderColor=stg.color||'#888';
   stgTag.style.color=stg.color||'#888';
   stgTag.textContent=`🏯${stg.name}`;
-  stgTag.title=stg.desc+' | 第'+stg.startRound+'-'+stg.endRound+'rounds';
+  stgTag.title=stg.desc+' | 第'+stg.startRound+'-'+stg.endRound+'轮';
   el.appendChild(stgTag);
 }
 
@@ -2018,7 +2018,7 @@ function renderTopBar(){
   document.getElementById('hpDisplay').textContent=`${G.hp}/${G.maxHp}`;
   document.getElementById('goldDisplay').textContent=G.gold;
   const intVal=Math.min(Math.floor(G.gold/10),3);
-  document.getElementById('goldDisplay').title=intVal>0?`灵石(利息 ${intVal}/Round)`:``;
+  document.getElementById('goldDisplay').title=intVal>0?`灵石(利息 ${intVal}/回合)`:``;
   document.getElementById('levelDisplay').textContent=`${G.level}⭐ (${G.exp}/${G.expMax}) +${Math.round((getLevelBonus()-1)*100)}%`;
   const isBoss=isBossRound(G.round);
   const bossIcon=isBoss?'👑':'';
@@ -2034,18 +2034,18 @@ function renderTopBar(){
   const artCount=G.artifacts?G.artifacts.length:0;
   const artDisp=document.getElementById('artifactDisplay');
   if(artCount>0){artDisp.style.display='inline-flex';document.getElementById('artifactCountTop').textContent=artCount;
-    // Artifacts列表悬浮
+    // 神器列表悬浮
     const artNames=G.artifacts.map(a=>a.icon+a.name).join(' · ');
     artDisp.title='Owned: '+artNames;
   }else{artDisp.style.display='none';}
-  document.getElementById('resultDisplay').textContent=G.gameOver?'💀 Fallen':animating?'⚔️ Fighting':'Preparing';
+  document.getElementById('resultDisplay').textContent=G.gameOver?'💀 道陨':animating?'⚔️ Fighting':'Preparing';
   document.getElementById('refreshBtn').disabled=G.gold<2||animating;
   document.getElementById('levelBtn').disabled=G.gold<4||animating;
   document.getElementById('startBtn').disabled=animating;
   const adBtn=document.getElementById('adBtn');
-  if(adBtn){adBtn.disabled=G.adUsedThisRound||animating||G.gameOver;adBtn.textContent=G.adUsedThisRound?'✅ 已观看':'📺 Ad (2-5🪙)';}
+  if(adBtn){adBtn.disabled=G.adUsedThisRound||animating||G.gameOver;adBtn.textContent=G.adUsedThisRound?'✅ 已观看':'📺 广告 (2-5🪙)';}
   const modeBtn=document.getElementById('modeBtn');
-  if(modeBtn)modeBtn.textContent='🎮 '+(G.gameMode==='endless'?'None尽':'Normal');
+  if(modeBtn)modeBtn.textContent='🎮 '+(G.gameMode==='endless'?'无尽':'普通');
   // 主题背景切换（背景图在body，界面纯黑不透明）
   const body=document.body;
   if(body){
@@ -2072,7 +2072,7 @@ function hideTooltip(){document.getElementById('tooltipEl').style.display='none'
 
 function getUnitTooltip(u,isEnemy){
   const starText='★'.repeat(u.star||1);
-  // Level和Artifacts加成（仅玩家）
+  // 等级和神器加成（仅玩家）
   let lvInfo='',artStatInfo='',artInfo='';
   if(!isEnemy){
     const lvMult=getLevelBonus();
@@ -2086,10 +2086,10 @@ function getUnitTooltip(u,isEnemy){
         if(a.id==='hp_up'){const v=Math.floor(curHp*0.15);curHp+=v;lines.push(`💊仙丹+${v}❤️`);}
         if(a.id==='atk_up'){const v=Math.floor(curAtk*0.15);curAtk+=v;lines.push(`⚔️利器+${v}🗡️`);}
       }
-      if(lines.length)artStatInfo=`<div class="tt-row" style="color:#b388ff;font-size:11px;">🏺Artifacts: ${lines.join(' ')}</div><div class="tt-row" style="color:#b388ff;"><span class="tt-label">🚀合计</span><span class="tt-val">❤️${curHp} 🗡️${curAtk}</span></div>`;
+      if(lines.length)artStatInfo=`<div class="tt-row" style="color:#b388ff;font-size:11px;">🏺神器: ${lines.join(' ')}</div><div class="tt-row" style="color:#b388ff;"><span class="tt-label">🚀合计</span><span class="tt-val">❤️${curHp} 🗡️${curAtk}</span></div>`;
     }
     lvInfo=`<div class="tt-row" style="color:#8cf;"><span class="tt-label">📊 强化+${pctGain}%</span><span class="tt-val">❤️${bonusHp} 🗡️${bonusAtk}</span></div>`;
-    // ArtifactsEffect列表（仅玩家）
+    // 神器效果列表（仅玩家）
     if(G.artifacts&&G.artifacts.length){
       const eff=[];
       for(const a of G.artifacts){
@@ -2098,9 +2098,9 @@ function getUnitTooltip(u,isEnemy){
           case 'regen':case 'thorns_armor':case 'soul_reap':case 'double_strike':case 'frost':
             eff.push(a.icon+a.name);break;
           case 'rage':eff.push('🔥狂暴');break;
-          case 'execute':eff.push('💀Execute');break;
+          case 'execute':eff.push('💀斩杀');break;
           case 'divine_shield':eff.push('👼天神');break;
-          case 'infinity':eff.push('♾️None限');break;
+          case 'infinity':eff.push('♾️无限');break;
           case 'blood_magic':eff.push('🩸血魔');break;
           case 'thunder_strike':eff.push('⚡天雷');break;
           case 'iron_will':eff.push('🛡️护心');break;
@@ -2111,10 +2111,10 @@ function getUnitTooltip(u,isEnemy){
           case 'shadow_clone':eff.push('👤分身');break;
         }
       }
-      if(eff.length)artInfo=`<div class="tt-row" style="color:#b388ff;font-size:11px;">🏺Artifacts: ${eff.join(' ')}</div>`;
+      if(eff.length)artInfo=`<div class="tt-row" style="color:#b388ff;font-size:11px;">🏺神器: ${eff.join(' ')}</div>`;
     }
   }
-  // Synergies加成显示
+  // 羁绊加成显示
   let synInfo='';
   const boardActive=G.board.filter(x=>x!==null);
   const boardSyn=calcSynergies(boardActive);
@@ -2129,76 +2129,76 @@ function getUnitTooltip(u,isEnemy){
     const eff=effects[si.tier-1]||'';
     synInfo+=`<div class="tt-row" style="color:#8f8;font-size:10px;">${info.icon}${f}${tierLabel}: ${eff}</div>`;
   }
-  // Crit计算
+  // 暴击率计算
   let critPct=0;
-  if(u.factions&&boardSyn['Rogue']&&u.factions.includes('Rogue')){
-    const cr=boardSyn['Rogue'];
+  if(u.factions&&boardSyn['散修']&&u.factions.includes('散修')){
+    const cr=boardSyn['散修'];
     critPct=cr.tier>=3?60:cr.tier>=2?40:20;
   }
-  // Artifacts加的Crit
+  // 神器加的暴击
   if(G.artifacts&&G.artifacts.some(a=>a.id==='fairy_edge'))critPct+=10;
-  // 阵型加成显示
+  // Formation加成显示
   const boardForUnit=isEnemy?G.enemyBoard:G.board;
   const formForUnit=detectFormation(boardForUnit);
   let formInfo='';
   if(formForUnit){
     const fb=formForUnit.bonus;
     const parts=[];
-    if(fb.atkMult)parts.push(`ATK+${Math.round((fb.atkMult-1)*100)}%`);
-    if(fb.hpMult)parts.push(`HP+${Math.round((fb.hpMult-1)*100)}%`);
-    if(fb.critRate)parts.push(`Crit+${Math.round(fb.critRate*100)}%`);
-    if(fb.spdMult)parts.push(`Speed+${Math.round(fb.spdMult*100)}%`);
-    if(fb.armorPen)parts.push(`Pierce+${Math.round(fb.armorPen*100)}%`);
-    if(fb.dodge)parts.push(`Dodge+${Math.round(fb.dodge*100)}%`);
+    if(fb.atkMult)parts.push(`攻击+${Math.round((fb.atkMult-1)*100)}%`);
+    if(fb.hpMult)parts.push(`生命+${Math.round((fb.hpMult-1)*100)}%`);
+    if(fb.critRate)parts.push(`暴击+${Math.round(fb.critRate*100)}%`);
+    if(fb.spdMult)parts.push(`攻速+${Math.round(fb.spdMult*100)}%`);
+    if(fb.armorPen)parts.push(`穿透+${Math.round(fb.armorPen*100)}%`);
+    if(fb.dodge)parts.push(`闪避+${Math.round(fb.dodge*100)}%`);
     formInfo=`<div class="tt-row" style="color:#ffd700;font-size:10px;border-top:1px solid rgba(255,255,255,0.05);padding-top:2px;margin-top:2px;">${formForUnit.icon} ${formForUnit.name}: ${parts.join(' ')}</div>`;
   }
-  const critLine=`<div class="tt-row"><span class="tt-label">💥 Crit</span><span class="tt-val">${critPct||0}%</span></div>`;
+  const critLine=`<div class="tt-row"><span class="tt-label">💥 暴击</span><span class="tt-val">${critPct||0}%</span></div>`;
   return `<div class="tt-name">${u.icon} ${u.name} ${starText}</div>
-<div class="tt-row"><span class="tt-label">❤️ HP</span><span class="tt-val">${u.hp}</span></div>
-<div class="tt-row"><span class="tt-label">🗡️ ATK</span><span class="tt-val">${u.atk}</span></div>
-<div class="tt-row"><span class="tt-label">🛡️ DEF</span><span class="tt-val">${u.def||0}</span></div>${critLine}
-<div class="tt-row"><span class="tt-label">🏹 Range</span><span class="tt-val">${u.range||'Melee'}</span></div>
+<div class="tt-row"><span class="tt-label">❤️ 生命</span><span class="tt-val">${u.hp}</span></div>
+<div class="tt-row"><span class="tt-label">🗡️ 攻击</span><span class="tt-val">${u.atk}</span></div>
+<div class="tt-row"><span class="tt-label">🛡️ 防御</span><span class="tt-val">${u.def||0}</span></div>${critLine}
+<div class="tt-row"><span class="tt-label">🏹 范围</span><span class="tt-val">${u.range||'近战'}</span></div>
 <div class="tt-faction">⚡ ${u.factions?u.factions.join('·'):''}</div>
-<div class="tt-row" style="color:#ff6b6b;font-size:11px;">🔺Counter: ${u.factions?u.factions.map(f=>COUNTERS[f]?COUNTERS[f]:'').filter(Boolean).join('·')||'None':'None'}</div>${synInfo}${formInfo}${lvInfo}${artStatInfo}${artInfo}<div class="tt-desc">${u.desc||''}</div>`;
+<div class="tt-row" style="color:#ff6b6b;font-size:11px;">🔺克制: ${u.factions?u.factions.map(f=>COUNTERS[f]?COUNTERS[f]:'').filter(Boolean).join('·')||'无':'无'}</div>${synInfo}${formInfo}${lvInfo}${artStatInfo}${artInfo}<div class="tt-desc">${u.desc||''}</div>`;
 }
 
 function getSynergyTooltip(f, info, count){
-  const th={Swordsman:[2,4,6],Body Cult:[2,4,6],Rogue:[2,4,6],Rune Master:[2,3,5],Alchemist:[2,3,5],Array Master:[2,3,5],Demon Cult:[2,4,6],Beast Cult:[2,4,6],Ghost Cult:[2,3,5],Buddha Sect:[2,3,5]};
+  const th={剑修:[2,4,6],体修:[2,4,6],散修:[2,4,6],符修:[2,3,5],丹修:[2,3,5],阵修:[2,3,5],魔修:[2,4,6],妖修:[2,4,6],鬼修:[2,3,5],佛门:[2,3,5]};
   const tiers=th[f]||[2,3,5];
-  let html=`<div class="tt-name">${info.icon} ${f}</div><div style="color:#888;font-size:11px;">已有 ${count} </div><div style="margin-top:4px;border-top:1px solid rgba(255,255,255,0.08);padding-top:4px;">`;
+  let html=`<div class="tt-name">${info.icon} ${f}</div><div style="color:#888;font-size:11px;">已有 ${count} 个</div><div style="margin-top:4px;border-top:1px solid rgba(255,255,255,0.08);padding-top:4px;">`;
   const labels=['初级','中级','高级'];
   const effects=[info.t1,info.t2,info.t3];
   for(let i=0;i<tiers.length;i++){
     const active=count>=tiers[i];
     const color=i===0?'#8f8':i===1?'#ffd700':'#f44';
-    html+=`<div class="tt-row"><span class="tt-label">${tiers[i]}·${labels[i]}</span><span class="tt-val" style="color:${active?color:'#666'};">${active?'✅ ':'❌ '}${effects[i]||'未激活'}</span></div>`;
+    html+=`<div class="tt-row"><span class="tt-label">${tiers[i]}个·${labels[i]}</span><span class="tt-val" style="color:${active?color:'#666'};">${active?'✅ ':'❌ '}${effects[i]||'未激活'}</span></div>`;
   }
   return html+'</div>';
 }
 
-// ---- 事 ----
+// ---- 事件 ----
 document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('refreshBtn').onclick=refreshShop;
   document.getElementById('levelBtn').onclick=levelUp;
   document.getElementById('startBtn').onclick=startBattle;
   document.getElementById('battleDoneBtn').onclick=afterBattle;
   document.getElementById('adBtn').onclick=watchAd;
-  document.getElementById('modeBtn').onclick=function(){G.gameMode=G.gameMode==='endless'?'normal':'endless';this.textContent='🎮 '+(G.gameMode==='endless'?('None尽'):'Normal');initGame();};
-  // Formations悬浮弹窗
+  document.getElementById('modeBtn').onclick=function(){G.gameMode=G.gameMode==='endless'?'normal':'endless';this.textContent='🎮 '+(G.gameMode==='endless'?('无尽'):'普通');initGame();};
+  // Formation指南悬浮弹窗
   document.getElementById('formationToggle').onmouseover=function(e){
-    showTooltip(e,'<div class="tt-name" style="font-size:12px;">🗺️ All Formations</div>'+
+    showTooltip(e,'<div class="tt-name" style="font-size:12px;">🗺️ Formation一览</div>'+
       '<div style="color:#aaa;font-size:10px;line-height:1.5;margin-top:4px;">'+
-      '⚡<b style="color:#ffd700;">Arrow Formation</b> Front ≥ Back+2 → ATK+20%<br>'+
+      '⚡<b style="color:#ffd700;">Arrow Formation</b> Front ≥ Back+2 → 攻击+20%<br>'+
       '<span style="font-size:9px;color:#666;">◼◼◼◼◼◼<br>◻◻◻◻◻◻<br>◻◻◻◻◻◻</span><br>'+
-      '🦅<b style="color:#ffd700;">V-Formation</b> 对角斜线3人 → Crit+20%<br>'+
+      '🦅<b style="color:#ffd700;">V-Formation</b> Diagonal3人 → 暴击+20%<br>'+
       '<span style="font-size:9px;color:#666;">◼◻◻◻◻◼<br>◻◼◻◻◼◻<br>◼◻◻◻◻◼</span><br>'+
-      '⭕<b style="color:#ffd700;">Circle Formation</b> 3 rows, each ≥2 → HP+25%<br>'+
+      '⭕<b style="color:#ffd700;">Circle Formation</b> 3 Rows ≥2人 → 生命+25%<br>'+
       '<span style="font-size:9px;color:#666;">◼◼◻◻◼◼<br>◼◼◻◻◼◼<br>◼◼◻◻◼◼</span><br>'+
-      '📏<b style="color:#ffd700;">Line Formation</b> Same row ≥3 → Speed+15%<br>'+
+      '📏<b style="color:#ffd700;">Line Formation</b> Same Row ≥3人 → 攻速+15%<br>'+
       '<span style="font-size:9px;color:#666;">◻◻◻◻◻◻<br>◼◼◼◻◻◻<br>◻◻◻◻◻◻</span><br>'+
-      '🔺<b style="color:#ffd700;">Wedge Formation</b> 中列＞两侧 → Pierce+20%<br>'+
+      '🔺<b style="color:#ffd700;">Wedge Formation</b> 中列＞两侧 → 穿透+20%<br>'+
       '<span style="font-size:9px;color:#666;">◻◼◼◼◼◻<br>◻◼◼◼◼◻<br>◻◼◼◼◼◻</span><br>'+
-      '🌪️<b style="color:#ffd700;">Scatter Formation</b> ≥5 columns filled → Dodge+15%<br>'+
+      '🌪️<b style="color:#ffd700;">Scatter Formation</b> ≥5 columns → 闪避+15%<br>'+
       '<span style="font-size:9px;color:#666;">◼◻◼◻◼◼<br>◻◼◻◼◻◼<br>◼◻◼◻◼◻</span>'+
       '</div><div style="color:#666;font-size:9px;margin-top:4px;border-top:1px solid rgba(255,255,255,0.05);padding-top:4px;">◼=Place unit ◻=Empty</div>');
   };
@@ -2209,9 +2209,4 @@ initGame();
 </script>
 </body>
 </html>
-
-
-
-
-
 
